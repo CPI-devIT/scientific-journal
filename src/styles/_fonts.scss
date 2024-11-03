@@ -1,18 +1,22 @@
 @mixin font-face($font-family, $url, $weight) {
-    @font-face {
-        font-family: "#{$font-family}";
-        src: url('../fonts/#{$url}.woff2') format("woff2"),
-        url('../fonts/#{$url}.woff') format("woff");
-        font-weight: #{$weight};
-        font-display: swap;
-        font-style: normal;
-    }
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('../fonts/#{$url}.woff2') format('woff2'),
+			url('../fonts/#{$url}.woff') format('woff');
+		font-weight: #{$weight};
+		font-display: swap;
+		font-style: normal;
+	}
 }
 
-//Arimo
-//@include font-face(Arimo, Arimo-Regular, 400);
-//@include font-face(Arimo, Arimo-Medium, 500);
-//@include font-face(Arimo, Arimo-SemiBold, 700);
-//@include font-face(Arimo, Arimo-Bold, 700);
-//@include font-face(Arimo, Arimo-ExtraBold, 800);
-//@include font-face(Arimo, Arimo-Black, 800);
+//Manrope
+@include font-face(Manrope, Manrope-Regular, 400);
+@include font-face(Manrope, Manrope-Medium, 500);
+@include font-face(Manrope, Manrope-SemiBold, 600);
+@include font-face(Manrope, Manrope-Bold, 700);
+
+//Geologica
+@include font-face(Geologica, Geologica-Light, 300);
+@include font-face(Geologica, Geologica-Regular, 400);
+@include font-face(Geologica, Geologica-SemiBold, 600);
+@include font-face(Geologica, Geologica-Bold, 700);
