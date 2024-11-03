@@ -69,5 +69,12 @@
 		"tippy.js": "6.3.7",
 		"webpack": "latest",
 		"webpack-stream": "latest"
+	},
+	"dependencies": {
+		"axios": "^1.7.7",
+		"graph-modal": "^1.0.7",
+		"just-validate": "^4.3.0",
+		"mixitup": "^3.3.2",
+		"swiper": "^11.1.14"
 	}
 }
