@@ -1,5 +1,5 @@
 @include('./settings/_head.html', {
-'title' : 'Научный журнал | Главная страница',
+'title' : 'Статья',
 'description' : 'Описание текщей страницы',
 'keywords' : 'это, ключевые, запросы, текщей страницы',
 'robots' : 'noindex, nofollow',
@@ -11,10 +11,9 @@
 @include('./components/blocks/modals/_modals.html')
 
 <main class="main">
-    @include('./pages/home/_hero.html')
-    @include('./pages/home/_treatment.html')
-    @include('./pages/home/_numbers.html')
-    @include('./pages/home/_news.html')
+    <section class="release-page">
+        @include('./pages/article/_article.html')
+    </section>
 </main>
 
 @include('./components/blocks/_footer.html')
