@@ -1,0 +1,40 @@
+@mixin font($fz: 38px, $mb: 20px, $afz: 12px, $amb: 20px) {
+	margin-bottom: $mb;
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	font-size: $fz;
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+
+	@include mq(md) {
+		margin-bottom: $amb;
+		font-size: $afz;
+	}
+}
+
+@mixin card($p: 40px, $ap: 30px, $bg: var(--color-white)) {
+	border-radius: 30px;
+	padding: $p;
+	background-color: var(--color-white);
+
+	@include mq(md) {
+		padding: $ap;
+	}
+}
+
+@mixin link {
+	outline: 0;
+	transition:
+		color 0.3s,
+		box-shadow 0.3s;
+
+	&:focus-visible {
+		box-shadow: 0 0 0 2px var(--color-orange-400);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--color-orange-400);
+		}
+	}
+}

@@ -32,12 +32,70 @@ body {
 .button {
 	@include flex-alignment(0);
 
+	outline: 0;
 	border-radius: 15px;
 	padding: 16px 32px;
 	font-size: 16px;
+	line-height: 1.1;
 	text-align: center;
 	color: var(--color-white);
 	background-color: var(--color-dark-600);
+	transition:
+		background-color 0.3s,
+		box-shadow 0.3s;
+
+	&:focus-visible {
+		box-shadow: 0 0 0 2px var(--color-orange-400);
+		color: var(--color-dark-600);
+		background-color: transparent;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-brown-500);
+		}
+	}
+}
+
+.large,
+.title,
+.subtitle {
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+}
+
+// большие заголовки (на главной: "обращение", "новости")
+.large {
+	margin-bottom: 20px;
+	font-size: 50px;
+
+	@include mq(md) {
+		margin-bottom: 12px;
+		font-size: 38px;
+	}
+}
+
+// заголовки
+.title {
+	margin-bottom: 40px;
+	font-size: 38px;
+
+	@include mq(md) {
+		margin-bottom: 24px;
+		font-size: 26px;
+	}
+}
+
+.subtitle {
+	margin-bottom: 24px;
+	font-size: 26px;
+
+	@include mq(md) {
+		margin-bottom: 12px;
+		font-size: 20px;
+	}
 }
 
 .sr-only {
