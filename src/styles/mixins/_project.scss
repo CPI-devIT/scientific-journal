@@ -1,17 +1,3 @@
-@mixin font($fz: 38px, $mb: 20px, $afz: 12px, $amb: 20px) {
-	margin-bottom: $mb;
-	font-family: var(--font-secondary);
-	font-weight: 600;
-	font-size: $fz;
-	line-height: 1.1;
-	letter-spacing: -0.03em;
-
-	@include mq(md) {
-		margin-bottom: $amb;
-		font-size: $afz;
-	}
-}
-
 @mixin card($p: 40px, $ap: 30px, $bg: var(--color-white)) {
 	border-radius: 30px;
 	padding: $p;
