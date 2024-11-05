@@ -1,0 +1,29 @@
+.news {
+  &__list {
+    padding: 100px 0;
+
+    @include mq(md) {
+			padding: 60px 35px;
+		}
+  }
+
+  &__items {
+    display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 30px;
+    gap: 25px 65px;
+
+    @include mq(md) {
+			grid-template-columns: 1fr;
+      gap: 20px;
+		}
+  }
+
+  &__button{
+    width: max-content;
+
+    @include mq(md) {
+			width: 100%;
+		}
+  }
+}
