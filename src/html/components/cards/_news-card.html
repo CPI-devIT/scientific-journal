@@ -1,11 +1,11 @@
 <article class="news-card">
-  <a class="news-card__list" href="@href">
-    <time class="news-card__date" datetime="@date">
-      @date
+  <div class="news-card__wrapper">
+    <time class="news-card__date" datetime="@date-year-@date-month-@date-day">
+      @date-day.@date-month.@date-year
     </time>
-    <h3 class="news-card__title">@title</h3>
+    <a class="news-card__title" href="@href">@title</a>
     <div class="news-card__text">
       <p>@text</p>
     </div>
-  </a>
+  </div>
 </article>

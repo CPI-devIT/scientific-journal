@@ -38,20 +38,11 @@ body {
 	text-align: center;
 	color: var(--color-white);
 	background-color: var(--color-dark-600);
-  transition: background-color 0.4s;
-
-  &:hover {
-    background-color: var(--color-grey-300);
-  }
-
-  &:active {
-    background-color: var(--color-grey-100);
-  }
 }
 
 .title-page {
 margin: 0 auto;
-padding: 33px 0;
+padding: 33px 20px;
 width: 100%;
 font-weight: 600;
 font-size: 50px;

@@ -1,29 +1,29 @@
 .news {
   &__list {
-    padding: 100px 0;
+    padding: 100px 65px;
 
     @include mq(md) {
-			padding: 60px 35px;
-		}
+      padding: 60px 0;
+    }
   }
 
   &__items {
     display: grid;
-		grid-template-columns: 1fr 1fr;
-		margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
     gap: 25px 65px;
 
     @include mq(md) {
-			grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
       gap: 20px;
-		}
+    }
   }
 
-  &__button{
+  &__button {
     width: max-content;
 
     @include mq(md) {
-			width: 100%;
-		}
+      width: 100%;
+    }
   }
 }
