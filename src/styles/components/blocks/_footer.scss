@@ -1,3 +1,39 @@
 .footer {
-    
+  padding: 85px 70px 200px;
+  color: var(--color-white);
+  background-color: var(--color-dark-600);
+
+  @include mq(md) {
+			padding: 54px 15px 87px;
+		}
+
+  &__container {
+    @include flex-alignment(20px, space-between, flex-start);
+
+    @include mq(md) {
+			gap:50px;
+		}
+
+    flex-wrap: wrap
+  }
+
+  &__partners {
+    @include flex-simple(65px);
+
+    align-items: center;
+  }
+
+  &__text {
+    @include flex-simple(65px);
+
+    flex-wrap: wrap;
+
+    p {
+      max-width: 210px;
+
+      @include mq(lg) {
+			max-width: 320px;
+		}
+    }
+  }
 }
