@@ -1,5 +1,7 @@
 .treatment {
   padding: 125px 0;
+  font-weight: 600;
+  color: var(--color-dark-800);
   background-color: var(--color-white);
 
   @include mq(lg) {
@@ -42,7 +44,7 @@
   &__blockquote-text {
     max-width: 375px;
     font-weight: 400;
-    color: var(--color-brown-500);
+    color: var(--color-dark-400);
 
     p:not(:last-child) {
       margin-bottom: 10px;
