@@ -15,12 +15,54 @@
 		box-shadow 0.3s;
 
 	&:focus-visible {
-		box-shadow: 0 0 0 2px var(--color-orange-400);
+		box-shadow: var(--focus-shadow);
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
 			color: var(--color-orange-400);
+		}
+	}
+}
+
+@mixin circle($bg: var(--color-dark-600)) {
+	border-radius: 50%;
+	width: 42px;
+	height: 42px;
+	background-color: $bg;
+}
+
+@mixin typography-title {
+	display: inline-block;
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+@mixin icon($url, $sizes: 16px) {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: $sizes;
+	height: $sizes;
+	background-image: url($url);
+	transform: translate(-50%, -50%);
+}
+
+@mixin effects-button {
+	outline: 0;
+	transition:
+		box-shadow 0.3s,
+		background-color 0.3s;
+
+	&:focus-visible {
+		box-shadow: var(--focus-shadow);
+		background-color: transparent;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-dark-400);
 		}
 	}
 }

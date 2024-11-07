@@ -1,0 +1,36 @@
+.swiper-controls {
+	@include flex-simple(6px);
+
+	align-items: center;
+
+	&__button {
+		@include effects-button;
+		@include circle;
+
+		position: relative;
+
+		&::after {
+			@include bg-properties(contain);
+			@include icon('../img/icons/arrow.svg', 10px);
+
+			content: '';
+			transition: filter 0.3s;
+		}
+
+		&--next {
+			transform: rotate(180deg);
+		}
+
+		&--disabled {
+			background-color: var(--color-orange-150);
+			pointer-events: none;
+		}
+
+		&:focus-visible {
+			&::after {
+				filter: invert(91%) sepia(1%) saturate(996%) hue-rotate(339deg)
+					brightness(101%) contrast(83%);
+			}
+		}
+	}
+}

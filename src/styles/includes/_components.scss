@@ -1,3 +1,9 @@
+// ui
+@import '../components/ui/typography';
+@import '../components/ui/logo';
+@import '../components/ui/button';
+@import '../components/ui/swiper-buttons';
+
 // blocks
 @import '../components/blocks/header/header';
 @import '../components/blocks/header/burger-button';
@@ -13,5 +19,3 @@
 @import '../components/cards/people-card';
 @import '../components/cards/release-card';
 @import '../components/cards/table-item-card';
-
-// ui
