@@ -25,11 +25,11 @@
 	}
 }
 
-@mixin circle {
+@mixin circle($bg: var(--color-dark-600)) {
 	border-radius: 50%;
 	width: 42px;
 	height: 42px;
-	background-color: var(--color-dark-600);
+	background-color: $bg;
 }
 
 @mixin typography-title {
