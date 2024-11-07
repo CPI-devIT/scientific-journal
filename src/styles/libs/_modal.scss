@@ -6,7 +6,7 @@
 	z-index: 1000;
 	overflow: hidden auto;
 	text-align: center;
-	background-color: var(--rgba-dark-500);
+	background-color: var(--rgba-dark-800-500);
 	opacity: 0;
 	visibility: hidden;
 	transition:
@@ -22,7 +22,7 @@
 	}
 
 	&__container {
-		@include card(70px 54px, 70px 24px 60px, var(--color-orange-300));
+		@include card(70px 54px, 70px 24px 60px, var(--color-orange-200));
 
 		position: relative;
 		display: inline-block;
