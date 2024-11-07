@@ -15,23 +15,12 @@
     }
   }
 
-  &--burger {
-    position: fixed;
-
-    .header__nav {
-      background-color: var(--color-green-800);
-    }
-  }
-
   &__nav {
     padding: 25px 0;
-    transition: background-color 0.3s;
   }
 
   &__container {
     @include flex-alignment(10px, space-between, center);
-
-    max-width: 1295px;
   }
 
   &__menu {
@@ -42,12 +31,14 @@
     }
   }
 
-  &__link {
+  &__link,
+  &__registration {
     display: inline-block;
-  }
+    transition: color 0.4s;
 
-  &__logo {
-    object-fit: contain;
+    &:hover {
+      color: var(--color-orange-400);
+    }
   }
 
   &__account {
@@ -55,18 +46,20 @@
 
     align-items: center;
 
+    &::after {
+      @include bg-properties(24px 24px);
+
+      content: "";
+      border-radius: 100%;
+      width: 42px;
+      height: 42px;
+      background-image: url("../img/icons/user.svg");
+      background-color: var(--color-brown-200);
+    }
+
     @include mq(lg) {
       display: none;
     }
   }
 
-  &__person {
-    @include bg-properties(24px 24px);
-
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    background-image: url("../img/icons/user.svg");
-    background-color: var(--color-brown-200);
-  }
 }
