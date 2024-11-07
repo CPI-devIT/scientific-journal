@@ -1,8 +1,15 @@
 <div class="graph-modal">
     @include('./_modal-form.html')
+
     @include('./_modal-notification.html', {
-    'target': 'notification',
-    'title': '111',
-    'text': ['dsadadsadas']
+    'target': 'registration-success',
+    'title': 'Регистрация',
+    'text': ['Спасибо, мы отправили письмо с инструкциями на вашу электронную почту']
+    })
+
+    @include('./_modal-notification.html', {
+    'target': 'restore-access-success',
+    'title': 'Восстановление доступа',
+    'text': ['Отправили письмо с восстановлением на вашу электронную почту']
     })
 </div>
