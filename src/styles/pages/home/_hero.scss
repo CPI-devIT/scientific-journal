@@ -1,10 +1,8 @@
 .hero {
-  margin-bottom: 140px;
   padding: 92px 0;
   background: linear-gradient(314deg,rgba(245, 235, 223, 0.4) 0%,#e3eff2 100%);
 
   @include mq (lg){
-    margin-bottom: 45px;
     padding: 92px 0 60px;
     background: linear-gradient(295deg, rgba(245, 235, 223, 0.4) 0%, #e3eff2 100%);
   }
