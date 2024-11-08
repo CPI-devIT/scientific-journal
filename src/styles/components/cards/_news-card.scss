@@ -1,13 +1,10 @@
 .news-card {
+  @include card(40px, 25px);
+
   display: flex;
   flex-direction: column;
-  border-radius: 30px;
-  padding: 40px;
-  width: 100%;
   height: 100%;
-  font-weight: 300;
   color: var(--color-dark-800);
-  background-color: var(--color-white);
 
   &__date {
     display: block;
@@ -18,9 +15,10 @@
   &__title {
     display: block;
     margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 16px;
     color: var(--color-dark-800);
+  }
+
+  &__link {
     transition: color 0.4s;
 
     &:hover {
