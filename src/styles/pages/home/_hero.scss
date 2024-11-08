@@ -1,10 +1,9 @@
 .hero {
   padding: 92px 0;
-  background: linear-gradient(314deg,rgba(245, 235, 223, 0.4) 0%,#e3eff2 100%);
+  background-image: linear-gradient(314deg,rgba(245, 235, 223, 0.4) 0%,#e3eff2 100%);
 
   @include mq (lg){
     padding: 92px 0 60px;
-    background: linear-gradient(295deg, rgba(245, 235, 223, 0.4) 0%, #e3eff2 100%);
   }
 
   // &__images {
@@ -22,7 +21,7 @@
   //   &::before {
   //     left: 165px;
   //     top: 95px;
-  //     z-index: 0;
+  //     z-index: -1;
   //     width: 290px;
   //     height: 210px;
   //     transform: rotate(74deg);
@@ -49,9 +48,9 @@
   }
 
   &__img {
-    position: relative;
     z-index: 1000;
     border-radius: 30px;
+    object-fit: cover;
 
     @include mq(lg){
       width: 172px;
