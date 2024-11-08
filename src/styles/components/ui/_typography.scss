@@ -1,0 +1,44 @@
+.large,
+.title,
+.subtitle {
+	@include typography-title;
+
+	letter-spacing: -0.03em;
+}
+
+.large {
+	margin-bottom: 20px;
+	font-size: 50px;
+
+	@include mq(md) {
+		margin-bottom: 12px;
+		font-size: 38px;
+	}
+}
+
+.title {
+	margin-bottom: 40px;
+	font-size: 38px;
+	text-align: center;
+
+	@include mq(md) {
+		margin-bottom: 24px;
+		font-size: 26px;
+	}
+}
+
+.subtitle {
+	margin-bottom: 24px;
+	font-size: 26px;
+
+	@include mq(md) {
+		margin-bottom: 12px;
+		font-size: 20px;
+	}
+}
+
+.caption {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.1;
+}
