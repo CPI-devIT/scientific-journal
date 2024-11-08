@@ -1,19 +1,8 @@
 .header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
   z-index: 20;
   font-weight: 600;
   background-color: var(--color-white);
 
-  &--fixed {
-    position: fixed;
-
-    .header__nav {
-      position: relative;
-    }
-  }
 
   &__nav {
     padding: 25px 0;
@@ -23,7 +12,7 @@
     @include flex-alignment(10px, space-between, center);
   }
 
-  &__menu {
+  &__items {
     @include flex-alignment(62px, flex-end, center);
 
     @include mq(lg) {
@@ -31,8 +20,7 @@
     }
   }
 
-  &__link,
-  &__registration {
+  &__link {
     display: inline-block;
     transition: color 0.4s;
 
@@ -48,13 +36,10 @@
 
     &::after {
       @include bg-properties(24px 24px);
+      @include circle(var(--color-orange-300));
 
       content: "";
-      border-radius: 100%;
-      width: 42px;
-      height: 42px;
       background-image: url("../img/icons/user.svg");
-      background-color: var(--color-brown-200);
     }
 
     @include mq(lg) {
