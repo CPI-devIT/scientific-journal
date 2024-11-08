@@ -8,8 +8,11 @@
   &__items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 30px;
     gap: 25px 65px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
     @include mq(md) {
       grid-template-columns: 1fr;
