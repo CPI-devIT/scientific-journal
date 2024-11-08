@@ -1,0 +1,40 @@
+.news {
+  &__container {
+    margin-left: auto;
+    padding: 60px 0;
+    max-width: 985px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__date{
+    margin-bottom: 12px;
+    color: var(--color-dark-400);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__subtitle{
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    text-align: justify;
+
+    p:not(:last-child){
+      margin-bottom: 12px;
+    }
+  }
+
+  &__img {
+    border-radius: 30px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
