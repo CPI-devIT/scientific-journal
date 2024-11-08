@@ -1,0 +1,15 @@
+.news {
+padding: 135px 0 175px;
+
+&__wrapper{
+  @include flex-alignment(20px,space-between,center);
+}
+
+&__button{
+  max-width: max-content;
+
+  @include mq(md){
+    max-width: 100%;
+  }
+}
+}
