@@ -1,7 +1,7 @@
-@mixin card($p: 40px, $ap: 30px, $bg: var(--color-white)) {
-	border-radius: 30px;
+@mixin card($p: 40px, $ap: 30px, $bg: var(--color-white), $br: 30px) {
+	border-radius: $br;
 	padding: $p;
-	background-color: var(--color-white);
+	background-color: $bg;
 
 	@include mq(md) {
 		padding: $ap;
