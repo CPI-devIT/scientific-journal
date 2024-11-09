@@ -27,9 +27,15 @@
 		h6 {
 			@include typography-title;
 
-			margin-top: 36px;
-			margin-bottom: 12px;
 			letter-spacing: -0.03em;
+
+			&:not(:first-child) {
+				margin-top: 36px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
 		}
 
 		h3 {
@@ -62,12 +68,19 @@
 		}
 
 		img {
-			margin-top: 40px;
 			margin-bottom: 20px;
 			border-radius: 30px;
 
-			@include mq(md) {
-				margin-top: 20px;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			&:not(:first-child) {
+				margin-top: 40px;
+
+				@include mq(md) {
+					margin-top: 20px;
+				}
 			}
 		}
 
