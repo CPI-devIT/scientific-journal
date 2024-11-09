@@ -33,7 +33,7 @@
 }
 
 @mixin typography-title {
-	display: inline-block;
+	display: block;
 	font-family: var(--font-secondary);
 	font-weight: 600;
 	line-height: 1.1;
