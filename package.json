@@ -38,7 +38,7 @@
 		"gulp-file-include": "2.3.0",
 		"gulp-filter": "9.0.1",
 		"gulp-group-css-media-queries": "1.2.2",
-		"gulp-html-validator": "^0.0.5",
+		"gulp-html-validator": "0.0.5",
 		"gulp-if": "3.0.0",
 		"gulp-imagemin": "9.1.0",
 		"gulp-newer": "1.4.0",
@@ -71,10 +71,10 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"axios": "^1.7.7",
-		"graph-modal": "^1.0.7",
-		"just-validate": "^4.3.0",
-		"mixitup": "^3.3.2",
-		"swiper": "^11.1.14"
+		"axios": "1.7.7",
+		"graph-modal": "1.0.7",
+		"just-validate": "4.3.0",
+		"mixitup": "3.3.2",
+		"swiper": "11.1.14"
 	}
 }

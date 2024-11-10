@@ -1,14 +1,37 @@
 <div class="graph-modal">
-    @include('./_modal-form.html')
+    @include('./_modal-form.html', {
+    'target': 'modal-sign-in-form',
+    'title': 'Вход',
+    'button-text': 'Войти',
+    'type': 'sign-in',
+    'passwordAutocomplete': 'current-password',
+    'bottomText': 'Напомнить лоигн/пароль',
+    })
+
+    @include('./_modal-form.html', {
+    'target': 'modal-sign-up-form',
+    'title': 'Регистрация',
+    'button-text': 'Зарегистрироваться',
+    'type': 'sign-up',
+    'passwordAutocomplete': 'new-password',
+    })
+
+    @include('./_modal-form.html', {
+    'target': 'modal-restore-form',
+    'title': 'Восстановление доступа',
+    'button-text': 'Восстановить',
+    'type': 'restore',
+    'passwordAutocomplete': 'none',
+    })
 
     @include('./_modal-notification.html', {
-    'target': 'registration-success',
+    'target': 'modal-registration-success',
     'title': 'Регистрация',
     'text': ['Спасибо, мы отправили письмо с инструкциями на вашу электронную почту']
     })
 
     @include('./_modal-notification.html', {
-    'target': 'restore-access-success',
+    'target': 'modal-restore-access-success',
     'title': 'Восстановление доступа',
     'text': ['Отправили письмо с восстановлением на вашу электронную почту']
     })

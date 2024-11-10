@@ -1,0 +1,30 @@
+.news {
+  padding: 100px 0;
+
+  @include mq(md) {
+    padding: 60px 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 65px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(md) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    width: max-content;
+
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+}

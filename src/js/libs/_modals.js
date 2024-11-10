@@ -1,7 +1,6 @@
 import GraphModal from 'graph-modal';
 
-new GraphModal('registration-success');
-new GraphModal('restore-access-success');
+new GraphModal();
 
 // * Код к модальному окну для "спасибо"
 // if (document.querySelector('.modal-thank')) {

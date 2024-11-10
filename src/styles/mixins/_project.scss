@@ -1,7 +1,7 @@
-@mixin card($p: 40px, $ap: 30px, $bg: var(--color-white)) {
-	border-radius: 30px;
+@mixin card($p: 40px, $ap: 30px, $bg: var(--color-white), $br: 30px) {
+	border-radius: $br;
 	padding: $p;
-	background-color: var(--color-white);
+	background-color: $bg;
 
 	@include mq(md) {
 		padding: $ap;
@@ -10,6 +10,7 @@
 
 @mixin link {
 	outline: 0;
+	border-radius: 4px;
 	transition:
 		color 0.3s,
 		box-shadow 0.3s;
@@ -33,7 +34,7 @@
 }
 
 @mixin typography-title {
-	display: inline-block;
+	display: block;
 	font-family: var(--font-secondary);
 	font-weight: 600;
 	line-height: 1.1;
