@@ -1,43 +1,43 @@
 .footer {
-  padding: 85px 0 200px;
-  color: var(--color-white);
-  background-color: var(--color-dark-600);
+	padding: 85px 0 200px;
+	color: var(--color-white);
+	background-color: var(--color-dark-600);
 
-  @include mq(md) {
-    padding: 54px 0 87px;
-  }
+	@include mq(md) {
+		padding: 50px 0 80px;
+	}
 
-  &__container {
-    @include flex-alignment(20px, space-between, flex-start);
+	&__container {
+		@include flex-alignment(20px, space-between, flex-start);
 
-    flex-wrap: wrap;
+		flex-wrap: wrap;
 
-    @include mq(md) {
-      gap: 50px;
-    }
-  }
+		@include mq(md) {
+			gap: 50px;
+		}
+	}
 
-  &__partners {
-    @include flex-simple(65px);
+	&__partners {
+		@include flex-simple(65px);
 
-    align-items: center;
+		align-items: center;
 
-    @include mq(md) {
-      gap: 40px;
-    }
-  }
+		@include mq(md) {
+			gap: 40px;
+		}
+	}
 
-  &__text {
-    @include flex-simple(25px 65px);
+	&__text {
+		@include flex-simple(25px 65px);
 
-    flex-wrap: wrap;
+		flex-wrap: wrap;
 
-    p {
-      max-width: 210px;
+		p {
+			max-width: 210px;
 
-      @include mq(md) {
-        max-width: 100%;
-      }
-    }
-  }
+			@include mq(md) {
+				max-width: 100%;
+			}
+		}
+	}
 }

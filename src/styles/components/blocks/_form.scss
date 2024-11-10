@@ -1,51 +1,70 @@
 .form {
-	&__item {
+	&__title {
+		@include typography-title;
+
+		margin-bottom: 25px;
+		font-size: 38px;
+		letter-spacing: -0.03em;
+
+		@include mq(md) {
+			margin-bottom: 12px;
+			font-size: 26px;
+		}
+	}
+
+	&__items {
+		@include flex-simple(5px, column);
+
+		margin-bottom: 25px;
 		width: 100%;
-		max-width: 400px;
 
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
 	}
 
-	&__password {
-		position: relative;
-		width: 100%;
-	}
-
 	&__field {
-		border: 1px solid var(--color-black);
+		@include card(18px 22px, 16px 20px, var(--color-white), 15px);
+
+		border: 1px solid transparent;
 		width: 100%;
-	}
+		transition:
+			color 0.3s,
+			border-color 0.3s;
 
-	&__show {
-		position: absolute;
-		right: 10px;
-		top: 50%;
-		width: 24px;
-		height: 24px;
-		background-image: url('../img/icons/eye.svg');
-		transform: translateY(-50%);
-
-		@include bg-properties(contain);
-
-		&::before {
-			content: '';
-			position: absolute;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			width: 2px;
-			background-color: var(--color-black);
-			opacity: 0;
-			transform: rotate(45deg);
-			transition: opacity 0.3s;
+		&::placeholder {
+			color: var(--rgba-dark-800-25);
+			transition: color 0.3s;
 		}
 
-		&--active {
-			&::before {
-				opacity: 0.4;
+		&--error {
+			border-color: var(--color-red-300);
+			color: var(--color-red-300);
+		}
+
+		&:focus {
+			border-color: var(--color-orange-400);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::placeholder {
+					color: var(--rgba-dark-800);
+				}
 			}
 		}
+	}
+
+	&__button {
+		width: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		margin: 0 auto;
 	}
 }

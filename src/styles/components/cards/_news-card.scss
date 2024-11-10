@@ -1,0 +1,32 @@
+.news-card {
+	@include card(40px, 25px);
+
+	height: 100%;
+	color: var(--color-dark-800);
+
+	&__date {
+		display: block;
+		margin-bottom: 10px;
+		color: var(--color-brown-500);
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		a {
+			@include link;
+		}
+	}
+
+	&__text {
+		@include line-clamp(5);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
