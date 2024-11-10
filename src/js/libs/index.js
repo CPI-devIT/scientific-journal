@@ -3,7 +3,7 @@
 // import './_elipsis.js';
 // import './_inputmask.js';
 // import './_isotope.js';
-// import './_just-validate.js';
+import './_just-validate.js';
 // import './_mixitup.js';
 import './_modals.js';
 // import './_nouislider.js';

@@ -10,6 +10,11 @@
 
 @include('./components/blocks/modals/_modals.html')
 
+@include('./components/blocks/_page-head.html', {
+'href': './all-news.html',
+'title': 'Назад к новостям'
+})
+
 <main class="main">
     @include('./pages/one-news/_news.html')
 </main>

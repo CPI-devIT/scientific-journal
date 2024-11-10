@@ -17,4 +17,8 @@
 	&:focus-visible {
 		color: var(--color-dark-600);
 	}
+
+	&:disabled {
+		background-color: var(--color-orange-150);
+	}
 }

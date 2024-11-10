@@ -1,0 +1,12 @@
+<div class="page-head">
+    <div class="container">
+        @if(typeof href === 'undefined') {
+        <h1 class="page-head__title">@title</h1>
+        }
+        @if(typeof href !== 'undefined' && href) {
+        <a class="page-head__link" href="@href">
+            @title
+        </a>
+        }
+    </div>
+</div>
