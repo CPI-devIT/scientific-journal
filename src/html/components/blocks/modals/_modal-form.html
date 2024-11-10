@@ -1,5 +1,37 @@
-<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="">
+<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="@target">
     <div class="graph-modal__box">
         <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form">
+            <span class="form__title">
+                @title
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="@type-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="@type-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="@type-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="@type-email-error"></div>
+                </div>
+
+                @if(type === 'sign-in' || type === 'sign-up') {
+                <div class="form__item">
+                    <label class="sr-only" for="@type-email">
+                        Введите пароль
+                    </label>
+                    <input class="form__field" id="@type-email" name="password" type="password" placeholder="Пароль" autocomplete="@passwordAutocomplete" aria-describedby="@type-password-error" required>
+                    <div class="form__error sr-only" role="alert" id="@type-password-error"></div>
+                </div>
+                }
+            </div>
+            <button class="form__button button" type="submit" disabled>@button-text</button>
+
+            @if (type === 'sign-in') {
+            <button class="form__text" data-graph-path="modal-restore-form" type="button">
+                Напомнить лоигн/пароль
+            </button>
+            }
+        </form>
     </div>
 </div>
