@@ -16,13 +16,16 @@
 	&__item {
 		@include typography-title;
 
-		position: relative;
 		display: flex;
 		flex-direction: column;
 		padding: 0 12px;
 		width: 100%;
 		letter-spacing: -0.03em;
 		text-align: center;
+
+		@include mq(lg) {
+			padding: 0;
+		}
 
 		&:first-child {
 			padding-left: 0;
