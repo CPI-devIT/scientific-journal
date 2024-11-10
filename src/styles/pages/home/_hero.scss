@@ -1,0 +1,105 @@
+.hero {
+  padding: 92px 0;
+  background-image: linear-gradient(
+    314deg,
+    rgba(245, 235, 223, 0.4) 0%,
+    #e3eff2 100%
+  );
+
+  @include mq(lg) {
+    padding: 92px 0 60px;
+  }
+
+  &__images {
+    position: relative;
+    z-index: 1;
+    border-radius: 30px;
+    width: 258px;
+    height: 356;
+
+    @include mq(md) {
+      width: 172px;
+      height: 235px;
+    }
+
+    &::before,
+    &::after {
+      @include bg-properties(cover);
+
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 30px;
+      background-image: url("../img/home-page/hero.jpg");
+      opacity: 0.3;
+    }
+
+    &::before {
+      left: -95px;
+      top: -30px;
+      width: 210px;
+      height: 290px;
+      transform: rotate(160deg);
+
+      @include mq(md) {
+        left: -50px;
+        top: -20px;
+        width: 139px;
+        height: 192px;
+      }
+    }
+
+    &::after {
+      right: -88px;
+      top: 55px;
+      width: 155px;
+      height: 215px;
+      transform: rotate(20deg);
+
+      @include mq(md) {
+        right: -60px;
+        top: 55px;
+        width: 103px;
+        height: 142px;
+      }
+    }
+  }
+
+  &__container {
+    @include flex-alignment(30px 150px, space-around, center);
+
+    flex-wrap: wrap;
+
+    @include mq(lg) {
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    max-width: 563px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
+
+    p:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    max-width: max-content;
+
+    @include mq(lg) {
+      max-width: 100%;
+    }
+  }
+}
