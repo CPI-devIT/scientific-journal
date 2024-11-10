@@ -1,13 +1,42 @@
 .header {
-	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 2;
+  font-weight: 600;
+  background-color: var(--color-white);
 
-	&--fixed {
-		position: fixed;
-		transform: translateY(0);
-		transition: transform 0.35s ease-out;
-	}
+  &__nav {
+    @include flex-alignment(10px, space-between, center);
+
+    padding: 25px 0;
+  }
+
+  &__items {
+    @include flex-alignment(62px, flex-end, center);
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include link;
+
+    display: inline-block;
+  }
+
+  &__account {
+    @include flex-simple(20px);
+
+    align-items: center;
+
+    &::after {
+      @include bg-properties(24px 24px);
+      @include circle(var(--color-orange-300));
+
+      content: "";
+      background-image: url("../img/icons/user.svg");
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
 }
