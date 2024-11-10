@@ -1,15 +1,11 @@
 .header {
-  z-index: 20;
   font-weight: 600;
   background-color: var(--color-white);
 
-
   &__nav {
-    padding: 25px 0;
-  }
-
-  &__container {
     @include flex-alignment(10px, space-between, center);
+
+    padding: 25px 0;
   }
 
   &__items {
@@ -21,12 +17,9 @@
   }
 
   &__link {
-    display: inline-block;
-    transition: color 0.4s;
+    @include link;
 
-    &:hover {
-      color: var(--color-orange-400);
-    }
+    display: inline-block;
   }
 
   &__account {
@@ -46,5 +39,4 @@
       display: none;
     }
   }
-
 }
