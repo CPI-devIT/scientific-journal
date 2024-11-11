@@ -10,11 +10,14 @@ export const statistics = () => {
 
             const iterationTime = Math.round(time / ((endValue - startValue) / step))
 
-            let i = startValue
+            let i = Number(startValue)
             const interval = setInterval(() => {
                 if (i < endValue) {
-                    i++
+                    i = i + Number(step)
                 } else {
+                    if (i > endValue) {
+                        i = endValue
+                    }
                     clearInterval(interval);
                 }
 
