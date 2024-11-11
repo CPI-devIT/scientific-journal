@@ -25,8 +25,10 @@
   &__text {
     margin-bottom: 30px;
 
-    p:not(:last-child) {
-      margin-bottom: 10px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
 
     @include mq(lg) {
@@ -41,17 +43,19 @@
   }
 
   &__position {
-    max-width: 375px;
     font-weight: 400;
     color: var(--color-dark-400);
 
-    p:not(:last-child) {
-      margin-bottom: 10px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
   }
 
   &__img {
     border-radius: 208px;
+    width: 100%;
     max-width: 350px;
     object-fit: cover;
     aspect-ratio: 1/1;
