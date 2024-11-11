@@ -1,16 +1,16 @@
-<div class="news">
+<div class="news-block">
   <div class="container">
-    <div class="news__wrapper">
-      <h2 class="news__title large">Новости</h2>
+    <div class="news-block__header">
+      <h2 class="news-block__title large">Новости</h2>
 
       <div class="swiper-controls">
-        <button class="swiper-controls__button" type="button"></button>
+        <button class="swiper-controls__button swiper-controls__button--prev" type="button"></button>
         <button class="swiper-controls__button swiper-controls__button--next" type="button"></button>
       </div>
     </div>
-    <div class="news__swiper swiper">
-      <ul class="news__list swiper-wrapper">
-        <li class="news__slider swiper-slide">
+    <div class="news-block__swiper swiper">
+      <ul class="news-block__list swiper-wrapper">
+        <li class="news-block__slider swiper-slide">
           @include('../../components/cards/_news-card.html', {
           'date' : '20.11.25',
           'datetime' : '2025-11-20',
@@ -20,7 +20,7 @@
           })
         </li>
 
-        <li class="news__slider swiper-slide">
+        <li class="news-block__slider swiper-slide">
           @include('../../components/cards/_news-card.html', {
           'date' : '20.11.25',
           'datetime' : '2025-11-20',
@@ -30,7 +30,7 @@
           })
         </li>
 
-        <li class="news__slider swiper-slide">
+        <li class="news-block__slider swiper-slide">
           @include('../../components/cards/_news-card.html', {
           'date' : '20.11.25',
           'datetime' : '2025-11-20',
@@ -40,7 +40,7 @@
           })
         </li>
 
-        <li class="news__slider swiper-slide">
+        <li class="news-block__slider swiper-slide">
           @include('../../components/cards/_news-card.html', {
           'date' : '20.11.25',
           'datetime' : '2025-11-20',
@@ -50,7 +50,7 @@
           })
         </li>
 
-        <li class="news__slider swiper-slide">
+        <li class="news-block__slider swiper-slide">
           @include('../../components/cards/_news-card.html', {
           'date' : '20.11.28',
           'datetime' : '2025-11-20',
@@ -62,6 +62,6 @@
 
       </ul>
     </div>
-    <a class="news__button button" href="#">Все новости</a>
+    <a class="news-block__button button" href="#">Все новости</a>
   </div>
 </div>

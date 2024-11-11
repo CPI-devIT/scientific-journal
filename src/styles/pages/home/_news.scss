@@ -1,19 +1,19 @@
-.news {
-&__wrapper{
-  @include flex-alignment(20px,space-between,center);
+.news-block {
+  padding: 135px 0 175px;
 
-  margin-bottom:20px ;
-}
-
-&__swiper{
-  margin-bottom: 35px;
-}
-
-&__button{
-  max-width: max-content;
-
-  @include mq(md){
-    max-width: 100%;
+  &__header {
+    @include flex-alignment(20px, space-between, center);
   }
-}
+
+  &__swiper {
+    margin-bottom: 35px;
+  }
+
+  &__button {
+    max-width: max-content;
+
+    @include mq(md) {
+      max-width: 100%;
+    }
+  }
 }
