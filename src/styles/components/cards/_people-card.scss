@@ -1,0 +1,24 @@
+.people-card {
+  @include card(35px 40px,30px,var(--color-white));
+  @include flex-simple(20px);
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+  &__text {
+    width: 100%;
+    max-width: 372px;
+
+    p{
+      &:first-child{
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__img{
+    border-radius: 179px;
+    object-fit: cover;
+  }
+}
