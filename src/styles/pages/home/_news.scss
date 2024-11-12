@@ -1,0 +1,19 @@
+.news-block {
+  padding: 135px 0 175px;
+
+  &__header {
+    @include flex-alignment(20px, space-between, center);
+  }
+
+  &__swiper {
+    margin-bottom: 35px;
+  }
+
+  &__button {
+    max-width: max-content;
+
+    @include mq(md) {
+      max-width: 100%;
+    }
+  }
+}
