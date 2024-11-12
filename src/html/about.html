@@ -10,6 +10,10 @@
 
 @include('./components/blocks/modals/_modals.html')
 
+@include('./components/blocks/_page-head.html', {
+'title' : 'О журнале'
+})
+
 <main class="main">
     @include('./pages/about/_about.html')
     @include('./components/blocks/_people-list.html')
