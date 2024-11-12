@@ -1,3 +1,6 @@
+import './_burger.js';
+import './_header-sticky.js';
+
 // import './_time-count.js';
 // import './_rating.js';
 // import { showPassword } from './forms/_showPassword.js';
@@ -14,7 +17,6 @@
 // parallaxScroll();
 // showPassword();
 // activeClass();
-// burger();
 // showMore();
 // spollers();
 // stepper();

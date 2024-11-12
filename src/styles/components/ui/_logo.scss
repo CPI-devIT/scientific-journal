@@ -4,7 +4,7 @@
 	height: 42px;
 	max-width: 190px;
 
-	@include mq(md) {
+	@include mq(lg) {
 		height: 30px;
 		max-width: 130px;
 	}
@@ -13,7 +13,7 @@
 		height: 54px;
 		max-width: 248px;
 
-		@include mq(md) {
+		@include mq(lg) {
 			height: 34px;
 			max-width: 152px;
 		}
@@ -23,7 +23,7 @@
 		height: 80px;
 		max-width: 208px;
 
-		@include mq(md) {
+		@include mq(lg) {
 			height: 50px;
 			max-width: 128px;
 		}

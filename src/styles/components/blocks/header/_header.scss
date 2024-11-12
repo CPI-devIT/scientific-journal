@@ -1,42 +1,46 @@
 .header {
-  font-weight: 600;
-  background-color: var(--color-white);
+	position: relative;
+	z-index: 50;
+	height: 92px;
+	font-weight: 600;
+	background-color: var(--color-white);
 
-  &__nav {
-    @include flex-alignment(10px, space-between, center);
+	@include mq(md) {
+		height: 70px;
+	}
 
-    padding: 25px 0;
-  }
+	&--fixed {
+		.header__container {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			background-color: inherit;
+		}
+	}
 
-  &__items {
-    @include flex-alignment(62px, flex-end, center);
+	&__container {
+		top: -50px;
+		height: inherit;
+		background-color: inherit;
+		transition: top 0.3s;
+	}
 
-    @include mq(lg) {
-      display: none;
-    }
-  }
+	&__nav {
+		@include flex-simple(30px);
 
-  &__link {
-    @include link;
+		align-items: center;
+		padding: 25px 0;
+		background-color: var(--color-white);
 
-    display: inline-block;
-  }
+		@include mq(lg) {
+			padding: 20px 0;
+		}
+	}
 
-  &__account {
-    @include flex-simple(20px);
-
-    align-items: center;
-
-    &::after {
-      @include bg-properties(24px 24px);
-      @include circle(var(--color-orange-300));
-
-      content: "";
-      background-image: url("../img/icons/user.svg");
-    }
-
-    @include mq(lg) {
-      display: none;
-    }
-  }
+	&__logo {
+		position: relative;
+		z-index: 50;
+		margin-right: auto;
+	}
 }
