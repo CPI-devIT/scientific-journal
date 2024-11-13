@@ -1,1 +1,1 @@
-import "./_home-slider.js";
+import "./_news-slider.js";
