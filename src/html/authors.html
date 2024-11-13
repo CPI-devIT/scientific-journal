@@ -10,6 +10,10 @@
 
 @include('./components/blocks/modals/_modals.html')
 
+@include('./components/blocks/_page-head.html', {
+'title' : 'Авторам'
+})
+
 <main class="main">
     <section class="release-page">
         @include('./pages/authors/_authors.html')

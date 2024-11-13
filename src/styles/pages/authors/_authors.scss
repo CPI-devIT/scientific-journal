@@ -1,0 +1,107 @@
+.authors {
+  display: block;
+  padding: 90px 0;
+
+  @include mq(md) {
+    padding: 55px 0;
+  }
+
+  &__wrapper {
+    @include flex-alignment(50px, space-between, flex-start);
+
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      gap: 25px;
+    }
+
+    @include mq(md) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__info {
+    @include card(30px 40px, 25px);
+
+    width: 100%;
+    max-width: 615px;
+  }
+
+  &__documents {
+    font-weight: 700;
+    font-size: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include mq(md) {
+      font-size: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__items {
+    &:not(:last-child) {
+      margin-bottom: 65px;
+    }
+
+    @include mq(md) {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    h3 {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.notice {
+  @include flex-simple(25px);
+  @include card(35px 45px, 30px, var(--color-blue-300));
+
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 615px;
+
+  &__icon {
+    @include circle(var(--color-blue-500));
+    @include bg-properties(24px 24px);
+
+    background-image: url("../img/icons/bell.svg");
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 450px;
+    color: var(--color-blue-500);
+  }
+}
