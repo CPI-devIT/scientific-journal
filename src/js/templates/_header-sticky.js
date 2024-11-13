@@ -2,9 +2,8 @@ import { throttle } from '../utils/index.js';
 
 const stickyHeader = () => {
     const header = document.querySelector('.header');
-    // const hero = document.querySelector('.hero');
-    // let heroHeight = hero ? hero.offsetHeight : 500;
-    let heroHeight = 10;
+    const hero = document.querySelector('.hero');
+    let heroHeight = hero ? hero.offsetHeight : 500;
     const burgerMenu = header.querySelector('.burger-menu');
 
     if (header) {
