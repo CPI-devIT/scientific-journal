@@ -1,67 +1,74 @@
 .treatment {
-  padding: 125px 0;
-  font-weight: 600;
-  color: var(--color-dark-800);
-  background-color: var(--color-white);
+	padding: 125px 0;
+	font-weight: 600;
+	background-color: var(--color-white);
 
-  @include mq(lg) {
-    padding: 45px 0 65px;
-  }
+	@include mq(lg) {
+		padding: 45px 0 60px;
+	}
 
-  &__container {
-    @include flex-alignment(30px 20px, space-between, center);
+	&__container {
+		@include flex-alignment(30px 20px, space-between, center);
 
-    flex-wrap: wrap;
+		flex-wrap: wrap;
 
-    @include mq(lg) {
-      justify-content: center;
-    }
-  }
+		@include mq(lg) {
+			justify-content: center;
+		}
+	}
 
-  &__wrapper {
-    max-width: 560px;
-  }
+	&__wrapper {
+		max-width: 560px;
 
-  &__text {
-    margin-bottom: 30px;
+		@include mq(lg) {
+			max-width: 100%;
+		}
+	}
 
-    p {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: 30px;
 
-    @include mq(lg) {
-      max-width: 100%;
-    }
-  }
+			@include mq(md) {
+				margin-bottom: 20px;
+			}
+		}
 
-  &__item {
-    @include flex-simple(10px, column);
+		p {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
 
-    font-size: 14px;
-  }
+	&__author,
+	&__position {
+		font-size: 14px;
+	}
 
-  &__position {
-    font-weight: 400;
-    color: var(--color-dark-400);
+	&__author {
+		display: block;
 
-    p {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-  }
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
 
-  &__img {
-    border-radius: 208px;
-    width: 100%;
-    max-width: 350px;
-    object-fit: cover;
-    aspect-ratio: 1/1;
+	&__position {
+		font-weight: 400;
+		color: var(--color-dark-400);
+	}
 
-    @include mq(sm) {
-      max-width: 180px;
-    }
-  }
+	&__img {
+		border-radius: 208px;
+		width: 100%;
+		height: auto;
+		max-width: 350px;
+		object-fit: cover;
+		aspect-ratio: 1/1;
+
+		@include mq(sm) {
+			max-width: 180px;
+		}
+	}
 }
