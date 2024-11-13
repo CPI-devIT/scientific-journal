@@ -12,27 +12,29 @@
 
     @include mq(md) {
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 
-  &__info,
-  &__smi {
+  &__info {
     width: 100%;
     max-width: 532px;
   }
 
   &__text {
-    span {
-      &:not(:last-child) {
-        display: block;
-        margin-bottom: 5px;
-      }
-    }
-
     p {
       &:not(:last-child) {
         margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__item{
+    margin-bottom: 15px;
+
+    h4 {
+      &:not(:last-child) {
+        margin-bottom: 5px;
       }
     }
   }
