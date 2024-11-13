@@ -1,5 +1,5 @@
 .people-card {
-  @include card(35px 40px,30px,var(--color-white));
+  @include card(35px 40px,25px 30px);
   @include flex-simple(20px);
 
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 372px;
 
-    p{
+    dt{
       &:first-child{
         margin-bottom: 15px;
       }
@@ -18,7 +18,9 @@
   }
 
   &__img{
-    border-radius: 179px;
+    border-radius: 50%;
+    width: 120px;
     object-fit: cover;
+    aspect-ratio: 1/1;
   }
 }
