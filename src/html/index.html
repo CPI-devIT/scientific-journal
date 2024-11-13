@@ -2,7 +2,7 @@
 'title' : 'Научный журнал | Главная страница',
 'description' : 'Описание текщей страницы',
 'keywords' : 'это, ключевые, запросы, текщей страницы',
-'robots' : 'noindex, nofollow',
+'robots' : 'index, follow',
 'ogImage' : '',
 })
 
@@ -10,6 +10,7 @@
 
 @include('./components/blocks/modals/_modals.html')
 
+<h1 class="sr-only">Научный журнал</h1>
 <main class="main">
     @include('./pages/home/_hero.html')
     @include('./pages/home/_treatment.html')

@@ -2,13 +2,11 @@ import { throttle } from '../utils/index.js';
 
 const stickyHeader = () => {
     const header = document.querySelector('.header');
-    // const hero = document.querySelector('.hero');
-    // let heroHeight = hero ? hero.offsetHeight : 500;
-    let heroHeight = 10;
+    const hero = document.querySelector('.hero');
+    let heroHeight = hero ? hero.offsetHeight : 500;
     const burgerMenu = header.querySelector('.burger-menu');
 
     if (header) {
-        console.log('a')
         const changeClasses = () => {
             if (!burgerMenu.classList.contains('burger-menu--active')) {
                 const scrollDistance = window.scrollY;
