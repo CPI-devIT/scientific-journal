@@ -7,7 +7,6 @@ const stickyHeader = () => {
     const burgerMenu = header.querySelector('.burger-menu');
 
     if (header) {
-        console.log('a')
         const changeClasses = () => {
             if (!burgerMenu.classList.contains('burger-menu--active')) {
                 const scrollDistance = window.scrollY;
