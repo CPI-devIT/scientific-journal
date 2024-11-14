@@ -29,13 +29,13 @@
     }
   }
 
-  &__item{
+  &__item {
     margin-bottom: 15px;
+  }
 
-    h4 {
-      &:not(:last-child) {
-        margin-bottom: 5px;
-      }
+  &__caption {
+    &:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
 }
