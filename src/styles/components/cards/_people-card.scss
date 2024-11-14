@@ -1,23 +1,27 @@
 .people-card {
-  @include card(35px 40px,25px 30px);
+  @include card(35px 40px, 25px 30px);
   @include flex-simple(20px);
 
   flex-wrap: wrap;
   justify-content: space-between;
 
-
   &__text {
     width: 100%;
     max-width: 372px;
 
-    dt{
-      &:first-child{
+    p {
+      &:first-child {
         margin-bottom: 15px;
       }
     }
+
+    dd,
+    dt {
+      display: inline;
+    }
   }
 
-  &__img{
+  &__img {
     border-radius: 50%;
     width: 120px;
     object-fit: cover;

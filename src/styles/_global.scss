@@ -70,29 +70,3 @@ body {
     opacity: 0.5;
   }
 }
-
-.people {
-  padding: 85px 0 95px;
-
-  @include mq(lg) {
-    padding: 60px 0;
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px 65px;
-
-    &:not(:last-child) {
-      margin-bottom: 35px;
-    }
-
-    @include mq(lg) {
-      gap: 20px;
-    }
-
-    @include mq(md) {
-      grid-template-columns: 1fr;
-    }
-  }
-}
