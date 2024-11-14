@@ -10,10 +10,14 @@
 
 @include('./components/blocks/modals/_modals.html')
 
+@include('./components/blocks/_page-head.html', {
+'title' : 'Совет'
+})
+
 <main class="main">
     @include('./pages/council/_council.html')
-    @include('./components/blocks/_people-list.html')
-    @include('./components/blocks/_people-list.html')
+    @include('./pages/council/_collegium.html')
+    @include('./pages/council/_editorial.html')
 </main>
 
 @include('./components/blocks/_footer.html')

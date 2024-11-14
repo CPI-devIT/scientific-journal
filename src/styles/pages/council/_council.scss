@@ -1,0 +1,28 @@
+.council-page {
+  padding: 90px 0;
+  background-color: var(--color-white);
+
+  &__wrapper {
+    @include flex-alignment(200px, center, space-around);
+
+    @include mq(lg) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__people {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    text-align: center;
+
+    .swiper-controls {
+      position: absolute;
+      top: 100px;
+      z-index: 100;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
