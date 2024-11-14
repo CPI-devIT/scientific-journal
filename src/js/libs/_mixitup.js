@@ -1,2 +1,2 @@
-// import mixitup from 'mixitup';
-// let mixer = mixitup('.sort-content');
+import mixitup from 'mixitup';
+mixitup('.releases-page__container');

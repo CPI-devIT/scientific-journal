@@ -1,0 +1,13 @@
+.releases-page {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 210px);
+		padding: 90px 0;
+		gap: 40px 60px;
+
+		@include mq(lg) {
+			padding: 60px 0;
+			gap: 25px;
+		}
+	}
+}

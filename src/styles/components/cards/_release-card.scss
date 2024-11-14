@@ -1,0 +1,36 @@
+.release-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	&__image {
+		position: relative;
+		margin-bottom: 15px;
+		padding-bottom: 140%;
+	}
+
+	&__img {
+		position: absolute;
+		inset: 0;
+		border-radius: 30px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__title {
+		margin-bottom: 6px;
+	}
+
+	&__link {
+		@include link;
+
+		line-height: 1.3;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+		}
+	}
+}
