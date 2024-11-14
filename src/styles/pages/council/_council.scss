@@ -2,11 +2,16 @@
   padding: 90px 0;
   background-color: var(--color-white);
 
+  @include mq(lg) {
+    padding: 55px 0 25px;
+  }
+
   &__wrapper {
-    @include flex-alignment(200px, center, space-around);
+    @include flex-alignment(150px, space-between, center);
 
     @include mq(lg) {
       flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
     }
   }
@@ -14,7 +19,7 @@
   &__people {
     position: relative;
     width: 100%;
-    max-width: 375px;
+    max-width: 420px;
     text-align: center;
 
     .swiper-controls {
