@@ -8,15 +8,25 @@ const newsBlock = document.querySelector(".news-block__swiper")
 
 if (newsBlock) {
     new Swiper(newsBlock, {
-      speed: 800,
-      spaceBetween: 10,
-      loop: true,
-      slidesPerView: 1,
-      slidesPerGroup: 1,
+        speed: 800,
+        spaceBetween: 10,
+        loop: true,
 
-      navigation: {
-        nextEl: newsHeader.querySelector(".swiper-controls__button--next"),
-        prevEl: newsHeader.querySelector(".swiper-controls__button--prev"),
-      },
+
+        navigation: {
+            nextEl: newsHeader.querySelector(".swiper-controls__button--next"),
+            prevEl: newsHeader.querySelector(".swiper-controls__button--prev"),
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+        },
     });
 }
