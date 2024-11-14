@@ -1,4 +1,4 @@
-.authors {
+.authors-page {
   display: block;
   padding: 90px 0;
 
@@ -7,12 +7,10 @@
   }
 
   &__wrapper {
-    @include flex-alignment(50px, space-between, flex-start);
-
+    @include flex-alignment(25px 50px, space-between, flex-start);
 
     &:not(:last-child) {
       margin-bottom: 25px;
-      gap: 25px;
     }
 
     @include mq(md) {
@@ -67,11 +65,11 @@
 
   &__item {
     margin-bottom: 15px;
+  }
 
-    h3 {
-      &:not(:last-child) {
-        margin-bottom: 5px;
-      }
+  &__caption {
+    &:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
 
@@ -81,27 +79,5 @@
     &:not(:last-child) {
       margin-bottom: 5px;
     }
-  }
-}
-
-.notice {
-  @include flex-simple(25px);
-  @include card(35px 45px, 30px, var(--color-blue-300));
-
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 615px;
-
-  &__icon {
-    @include circle(var(--color-blue-500));
-    @include bg-properties(24px 24px);
-
-    background-image: url("../img/icons/bell.svg");
-  }
-
-  &__text {
-    width: 100%;
-    max-width: 450px;
-    color: var(--color-blue-500);
   }
 }
