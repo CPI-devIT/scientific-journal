@@ -10,7 +10,7 @@
     @include flex-alignment(150px, space-between, center);
 
     @include mq(lg) {
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
       gap: 20px;
     }
