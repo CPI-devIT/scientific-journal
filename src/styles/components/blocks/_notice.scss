@@ -1,0 +1,35 @@
+.notice {
+  @include card(35px 45px, 30px, var(--color-blue-300));
+
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 615px;
+
+  &::before {
+    @include circle(var(--color-blue-500));
+    @include bg-properties(24px 24px);
+
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    background-image: url("../img/icons/bell.svg");
+
+    @include mq(md) {
+      top: 30px;
+    }
+  }
+
+  &__text {
+    padding-left: 35px;
+    width: 100%;
+    max-width: 450px;
+    color: var(--color-blue-500);
+
+    @include mq(md) {
+      padding-top: 55px;
+      padding-left: 0;
+    }
+  }
+}
