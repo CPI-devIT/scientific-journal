@@ -1,13 +1,13 @@
-import Swiper, { Navigation } from "swiper";
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
 
 Swiper.use([Navigation]);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const councilPeople = document.querySelector(".council-page__wrapper");
-  const councilBlock = document.querySelector(".council-page__swiper");
+  const councilPeople = document.querySelector(".council-block__wrapper");
+  const councilBlock = document.querySelector(".council-block__swiper");
 
   if (councilBlock && councilPeople) {
-    const swiper = new Swiper(councilBlock, {
+    new Swiper(councilBlock, {
       speed: 800,
       slidesPerGroup: 1,
       slidesPerView: 1,
@@ -20,4 +20,3 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
-});

@@ -1,0 +1,64 @@
+<section class="council-block">
+    <h2 class="sr-only">
+        Информация о Главном редакторе и Заметителе главного редактора
+    </h2>
+    <div class="container">
+        <div class="council-block__wrapper">
+            <div class="council-block__editor">
+                <h3 class="council-block__subtitle subtitle">
+                    Главный редактор
+                </h3>
+                @include('../../components/cards/_people-card.html', {
+                'img': '0',
+                'name': 'Агафонова Маргарита Сергеевна',
+                'city': 'Воронеж',
+                'degree': 'Кандидат экономических наук',
+                'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
+                'positions': 'Заведующий кафедрой прикладной информатики',
+                })
+            </div>
+            <div class="council-block__editor">
+                <h3 class="council-block__subtitle subtitle">
+                    Зам. главного редактора
+                </h3>
+                <div class="swiper-controls">
+                    <button class="swiper-controls__button swiper-controls__button--prev" type="button"></button>
+                    <button class="swiper-controls__button swiper-controls__button--next" type="button"></button>
+                </div>
+                <div class="council-block__swiper swiper">
+                    <ul class="council-block__list swiper-wrapper">
+                        <li class="council-block__slider swiper-slide">
+                            @include('../../components/cards/_people-card.html', {
+                            'img': '2',
+                            'name': 'Агафонова Маргарита Сергеевна',
+                            'city': 'Воронеж',
+                            'degree': 'Кандидат экономических наук',
+                            'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
+                            'positions': 'Заведующий кафедрой прикладной информатики',
+                            })
+                        </li>
+                        <li class="council-block__slider swiper-slide">
+                            @include('../../components/cards/_people-card.html', {
+                            'img': '2',
+                            'name': 'Агафонова Маргарита Сергеевна',
+                            'city': 'Воронеж',
+                            'degree': 'Кандидат экономических наук',
+                            'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
+                            'positions': 'Заведующий кафедрой прикладной информатики', })
+                        </li>
+                        <li class="council-block__slider swiper-slide">
+                            @include('../../components/cards/_people-card.html', {
+                            'img': '2',
+                            'name': 'Агафонова Маргарита Сергеевна',
+                            'city': 'Воронеж',
+                            'degree': 'Кандидат экономических наук',
+                            'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
+                            'positions': 'Заведующий кафедрой прикладной информатики',
+                            })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

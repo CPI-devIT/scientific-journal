@@ -1,0 +1,49 @@
+.council-block {
+	padding: 90px 0;
+	background-color: var(--color-white);
+
+	@include mq(lg) {
+		padding: 60px 0;
+	}
+
+	&__wrapper {
+		@include flex-alignment(70px, space-between, center);
+
+		@include mq(lg) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+
+	&__editor {
+		position: relative;
+		width: 100%;
+		text-align: center;
+
+		@include mq(lg, min) {
+			max-width: 420px;
+		}
+
+		.swiper-controls {
+			position: absolute;
+			top: 100px;
+			z-index: 10;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	.people-card {
+		@include card(0);
+
+		justify-content: center;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+
+		@include mq(md) {
+			padding: 10px 0;
+		}
+	}
+}
