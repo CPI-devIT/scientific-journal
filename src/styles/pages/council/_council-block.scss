@@ -20,7 +20,7 @@
 		width: 100%;
 		text-align: center;
 
-		@include mq(md, min) {
+		@include mq(lg, min) {
 			max-width: 420px;
 		}
 
@@ -35,9 +35,12 @@
 
 	.people-card {
 		@include card(0);
-		@include flex-simple(30px);
 
 		justify-content: center;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
 
 		@include mq(md) {
 			padding: 10px 0;

@@ -3,7 +3,6 @@
 	@include flex-simple(20px);
 
 	flex-wrap: wrap;
-	justify-content: space-between;
 
 	&__img {
 		border-radius: 50%;
@@ -18,8 +17,7 @@
 	}
 
 	&__text {
-		width: 100%;
-		max-width: 372px;
+		flex: 1 1 73%;
 		line-height: 1.3;
 	}
 
