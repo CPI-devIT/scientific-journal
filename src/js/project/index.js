@@ -1,1 +1,2 @@
-import './_statistics.js'
+import "./sliders/index.js";
+import "./_statistics.js";

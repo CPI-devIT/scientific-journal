@@ -1,6 +1,6 @@
 <section class="people-block">
   <div class="container">
-  <h2 class="people-block__title title">Список авторов</h2>
+  <h3 class="people-block__title title">Редакционная коллегия</h3>
   <ul class="people-block__list spollers">
     <li class="people-block__item">
       @include('../../components/cards/_people-card.html', {
@@ -14,7 +14,7 @@
     </li>
     <li class="people-block__item">
         @include('../../components/cards/_people-card.html', {
-        'img': '2',
+        'img': 'no-photo',
         'name': 'Агафонова Маргарита Сергеевна',
         'city': 'Воронеж',
         'degree': 'Кандидат экономических наук',
@@ -42,16 +42,8 @@
         'positions': 'Заведующий кафедрой прикладной информатики',
         })
     </li>
-    <li class="people-block__item">@include('../../components/cards/_people-card.html', {
-        'img': '1',
-        'name': 'Агафонова Маргарита Сергеевна',
-        'city': 'Воронеж',
-        'degree': 'Кандидат экономических наук',
-        'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
-        'positions': 'Заведующий кафедрой прикладной информатики',
-        })</li>
     <li class="people-block__item">
-      @include('../../components/cards/_people-card.html', {
+        @include('../../components/cards/_people-card.html', {
         'img': '2',
         'name': 'Агафонова Маргарита Сергеевна',
         'city': 'Воронеж',
@@ -59,28 +51,7 @@
         'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
         'positions': 'Заведующий кафедрой прикладной информатики',
         })
-    </li>
-    <li class="people-block__item">
-      @include('../../components/cards/_people-card.html', {
-        'img': '3',
-        'name': 'Агафонова Маргарита Сергеевна',
-        'city': 'Воронеж',
-        'degree': 'Кандидат экономических наук',
-        'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
-        'positions': 'Заведующий кафедрой прикладной информатики',
-        })
-    </li>
-    <li class="people-block__item">
-      @include('../../components/cards/_people-card.html', {
-        'img': '4',
-        'name': 'Агафонова Маргарита Сергеевна',
-        'city': 'Воронеж',
-        'degree': 'Кандидат экономических наук',
-        'place': 'АНОО ВО «Воронежский экономико-правовой институт»',
-        'positions': 'Заведующий кафедрой прикладной информатики',
-        })
-    </li>
+      </li>
   </ul>
-  <button class="people-block__button button" type="button">Показать ещё</button>
   </div>
 </section>

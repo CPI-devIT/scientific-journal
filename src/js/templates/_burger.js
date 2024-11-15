@@ -1,22 +1,25 @@
 import { disableScroll, enableScroll } from '../utils/index.js';
 
-export const burger = () => {
+const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
     const menu = document.querySelector('[data-menu]');
     const menuLinks = document.querySelectorAll('[data-menu-link]');
     const overlay = document.querySelector('[data-menu-overlay]');
+    const header = document.querySelector('.header');
 
     const checkClass = () => {
         if (burgerButton.classList.contains('burger-button--active')) {
             document.addEventListener('keydown', keyHandler);
             burgerButton.setAttribute('aria-expanded', 'true');
             burgerButton.setAttribute('aria-label', 'закрыть меню');
+            header.classList.add('header--fixed');
             burgerButton.focus();
             disableScroll();
         } else {
             document.removeEventListener('keydown', keyHandler);
             burgerButton.setAttribute('aria-expanded', 'false');
             burgerButton.setAttribute('aria-label', 'открыть меню');
+            header.classList.remove('header--fixed');
             enableScroll();
         }
     };
@@ -24,17 +27,17 @@ export const burger = () => {
     const hideBurger = () => {
         burgerButton.classList.remove('burger-button--active');
         menu.classList.remove('burger-menu--active');
-        overlay.classList.remove('overlay--active');
+        overlay?.classList.remove('overlay--active');
     }
 
     burgerButton.addEventListener('click', () => {
         burgerButton.classList.toggle('burger-button--active');
         menu.classList.toggle('burger-menu--active');
-        overlay.classList.toggle('overlay--active');
+        overlay?.classList.toggle('overlay--active');
         checkClass();
     });
 
-    overlay.addEventListener('click', () => {
+    overlay?.addEventListener('click', () => {
         hideBurger();
         checkClass();
     });
@@ -73,3 +76,5 @@ export const burger = () => {
         }
     }
 };
+
+burger();

@@ -1,0 +1,42 @@
+.people-card {
+  &--council {
+    @include card(10px 40px,10px);
+    @include flex-simple(30px);
+
+    justify-content: center;
+
+    @include mq(md){
+      padding: 10px 0;
+    }
+  }
+
+  @include card(35px 40px, 25px 30px);
+  @include flex-simple(20px);
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__text {
+    width: 100%;
+    max-width: 372px;
+
+    p {
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+
+    dd,
+    dt {
+      display: inline;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    width: 120px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+}
+

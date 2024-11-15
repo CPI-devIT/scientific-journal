@@ -27,6 +27,24 @@
 		}
 	}
 
+	&__logo {
+		outline: 0;
+		border-radius: 4px;
+		transition:
+			opacity 0.3s,
+			box-shadow 0.3s;
+
+		&:focus-visible {
+			box-shadow: var(--focus-shadow);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+
 	&__text {
 		@include flex-simple(25px 65px);
 

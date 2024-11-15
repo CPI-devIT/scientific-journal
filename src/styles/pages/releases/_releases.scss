@@ -1,0 +1,75 @@
+.releases-page {
+	.page-head {
+		&__title {
+			margin-bottom: 25px;
+			border-bottom: 2px solid var(--color-white);
+			padding-bottom: 35px;
+
+			@include mq(md) {
+				padding-bottom: 25px;
+			}
+		}
+	}
+
+	&__filters {
+		@include flex-alignment;
+
+		flex-wrap: wrap;
+		width: 100%;
+
+		@include mq(lg) {
+			gap: 20px 15px;
+		}
+
+		@include mq(md) {
+			display: none;
+		}
+	}
+
+	&__button {
+		outline: 0;
+		border-radius: 30px;
+		padding: 8px 20px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.1;
+		background-color: transparent;
+		transition:
+			background-color 0.3s,
+			color 0.3s,
+			box-shadow 0.3s;
+
+		&:focus-visible {
+			box-shadow: var(--focus-shadow);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-orange-400);
+			}
+		}
+
+		&.mixitup-control-active {
+			background-color: var(--color-white);
+			pointer-events: none;
+		}
+	}
+
+	&__mobile {
+		@include mq(md, min) {
+			display: none;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 210px);
+		padding: 90px 0;
+		gap: 40px 60px;
+
+		@include mq(lg) {
+			padding: 60px 0;
+			gap: 25px;
+		}
+	}
+}
