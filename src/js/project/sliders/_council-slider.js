@@ -3,8 +3,8 @@ import { Navigation } from "swiper/modules";
 
 Swiper.use([Navigation]);
 
-  const councilPeople = document.querySelector(".council__wrapper");
-  const councilBlock = document.querySelector(".council__swiper");
+  const councilPeople = document.querySelector(".council-block__wrapper");
+  const councilBlock = document.querySelector(".council-block__swiper");
 
   if (councilBlock && councilPeople) {
     new Swiper(councilBlock, {
