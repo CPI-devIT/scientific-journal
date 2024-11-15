@@ -1,5 +1,5 @@
 // import './_aos.js';
-// import './_choices.js';
+import './_choices.js';
 // import './_elipsis.js';
 // import './_inputmask.js';
 // import './_isotope.js';
