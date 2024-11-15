@@ -1,4 +1,15 @@
 .people-card {
+  &--council {
+    @include card(10px 40px,10px);
+    @include flex-simple(30px);
+
+    justify-content: center;
+
+    @include mq(md){
+      padding: 10px 0;
+    }
+  }
+
   @include card(35px 40px, 25px 30px);
   @include flex-simple(20px);
 
@@ -28,3 +39,4 @@
     aspect-ratio: 1/1;
   }
 }
+

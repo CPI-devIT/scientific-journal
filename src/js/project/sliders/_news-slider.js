@@ -12,6 +12,7 @@ if (newsBlock) {
         spaceBetween: 10,
         loop: true,
 
+
         navigation: {
             nextEl: newsHeader.querySelector(".swiper-controls__button--next"),
             prevEl: newsHeader.querySelector(".swiper-controls__button--prev"),
