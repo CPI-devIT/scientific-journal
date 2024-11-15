@@ -1,0 +1,41 @@
+.about {
+  display: block;
+  padding: 90px 0;
+  background-color: var(--color-white);
+
+  @include mq(md) {
+    padding: 55px 0;
+  }
+
+  &__wrapper {
+    @include flex-alignment(50px, space-between, flex-start);
+
+    @include mq(md) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 532px;
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__caption {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
