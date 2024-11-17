@@ -2,7 +2,7 @@
 'title' : 'Выпуск',
 'description' : 'Описание текщей страницы',
 'keywords' : 'это, ключевые, запросы, текщей страницы',
-'robots' : 'noindex, nofollow',
+'robots' : 'index, follow',
 'ogImage' : '',
 })
 
@@ -10,10 +10,20 @@
 
 @include('./components/blocks/modals/_modals.html')
 
+<h1 class="sr-only">Выпуск №</h1>
 <main class="main">
     <section class="release-page">
-        @include('./pages/release/_menu.html')
-        @include('./pages/release/_release.html')
+        @include('./pages/release/_header.html')
+        <div class="container">
+            <div class="page-wrapper">
+                <div class="page-wrapper__menu">
+                    @include('./pages/release/_menu.html')
+                </div>
+                <div class="page-wrapper__content">
+                    @include('./pages/release/_release.html')
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 

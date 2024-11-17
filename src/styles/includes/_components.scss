@@ -9,14 +9,16 @@
 @import '../components/blocks/header/header';
 @import '../components/blocks/header/burger-button';
 @import '../components/blocks/header/burger-menu';
-@import '../components/blocks/page-head';
+@import '../components/blocks/page/page-head';
+@import '../components/blocks/page/page-wrapper';
+@import '../components/blocks/side-menu';
 @import '../components/blocks/people-block';
 @import '../components/blocks/form';
 @import '../components/blocks/footer';
 @import '../components/blocks/notice';
 
 // cards
-@import '../components/cards/article-mini-card';
+@import '../components/cards/article-card';
 @import '../components/cards/news-card';
 @import '../components/cards/people-card';
 @import '../components/cards/release-card';

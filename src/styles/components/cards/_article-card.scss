@@ -1,0 +1,42 @@
+.article-card {
+	@include card(30px 35px, 25px);
+
+	position: relative;
+	width: 100%;
+	color: var(--color-dark-400);
+
+	&__title {
+		margin-bottom: 24px;
+		color: var(--color-dark-800);
+
+		@include mq(md) {
+			margin-bottom: 10px;
+		}
+
+		a {
+			@include link;
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+			}
+		}
+	}
+
+	&__text {
+		@include line-clamp(5);
+
+		margin-bottom: 24px;
+
+		@include mq(md) {
+			margin-bottom: 20px;
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
