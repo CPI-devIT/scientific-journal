@@ -1,0 +1,29 @@
+.page-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 90px 0;
+	gap: 24px;
+
+	@include mq(md) {
+		padding: 60px 0;
+	}
+
+	&__content {
+		@include mq(lg, min) {
+			width: 100%;
+			max-width: 1024px;
+		}
+	}
+
+	&__menu {
+		position: sticky;
+		align-self: flex-start;
+		width: 100%;
+		max-width: 210px;
+
+		@include mq(lg) {
+			display: none;
+		}
+	}
+}

@@ -36,4 +36,13 @@
 			background-image: url('../img/icons/arrow.svg');
 		}
 	}
+
+	&__mobile {
+		border-top: 2px solid var(--color-white);
+		padding-top: 25px;
+
+		@include mq(md, min) {
+			display: none;
+		}
+	}
 }

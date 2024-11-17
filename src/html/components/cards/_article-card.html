@@ -1,0 +1,11 @@
+<article class="article-card" id="@id">
+    <h3 class="article-card__title caption">
+        <a href="@href">@title</a>
+    </h3>
+    <div class="article-card__text">
+        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    </div>
+    <p class="article-card__authors">
+        Авторы: @authors
+    </p>
+</article>
