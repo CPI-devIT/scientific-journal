@@ -1,8 +1,8 @@
 @include('./settings/_head.html', {
-'title' : 'Статья',
+'title' : 'Статья | Научный журнал',
 'description' : 'Описание текщей страницы',
 'keywords' : 'это, ключевые, запросы, текщей страницы',
-'robots' : 'noindex, nofollow',
+'robots' : 'index, follow',
 'ogImage' : '',
 })
 
@@ -11,8 +11,19 @@
 @include('./components/blocks/modals/_modals.html')
 
 <main class="main">
-    <section class="release-page">
-        @include('./pages/article/_article.html')
+    <section class="article-page">
+        <div class="container">
+            <div class="page-wrapper">
+                <div class="page-wrapper__menu">
+                    <a class="button" href="#" download>
+                        Скачать статью
+                    </a>
+                </div>
+                <div class="page-wrapper__content">
+                    @include('./pages/article/_article.html')
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 

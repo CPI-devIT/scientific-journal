@@ -12,3 +12,7 @@ if (document.querySelector('.releases-page')) {
 
     }
 }
+
+if (document.querySelector('.release-page')) {
+    mixitup('.release-page');
+}

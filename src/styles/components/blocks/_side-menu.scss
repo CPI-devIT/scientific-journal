@@ -1,4 +1,6 @@
 .side-menu {
+	position: sticky;
+	top: 120px;
 	width: 100%;
 
 	&__title {
@@ -7,19 +9,22 @@
 	}
 
 	&__items {
+		@include flex-simple(10px, column);
+
 		&:not(:last-child) {
 			margin-bottom: 40px;
 		}
 	}
 
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-	}
-
 	&__link {
 		@include link;
+
+		text-align: left;
+
+		&.mixitup-control-active {
+			color: var(--color-orange-400);
+			pointer-events: none;
+		}
 	}
 
 	&__buttons {
