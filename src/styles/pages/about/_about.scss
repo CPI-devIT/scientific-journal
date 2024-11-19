@@ -30,26 +30,15 @@
 	}
 
 	&__items {
-		dd {
-			display: block;
+		@include flex-simple(16px, column);
 
-			&:not(:last-child) {
-				margin-bottom: 16px;
-
-				@include mq(md) {
-					margin-bottom: 10px;
-				}
-			}
+		li {
+			@include flex-simple(6px, column);
 		}
 
-		dt {
-			display: block;
+		strong {
 			font-weight: 600;
 			font-size: 16px;
-
-			&:not(:last-child) {
-				margin-bottom: 5px;
-			}
 		}
 	}
 }
