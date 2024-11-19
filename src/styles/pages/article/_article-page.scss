@@ -1,0 +1,21 @@
+.article-page {
+	.page-wrapper {
+		@include mq(lg) {
+			flex-direction: column-reverse;
+			gap: 30px;
+		}
+
+		&__menu {
+			@include mq(lg) {
+				position: static;
+				top: unset;
+				display: flex;
+				width: auto;
+			}
+
+			@include mq(md) {
+				width: 100%;
+			}
+		}
+	}
+}
