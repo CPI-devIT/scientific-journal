@@ -46,6 +46,10 @@
 
 		&--search {
 			padding-left: 50px;
+
+			@include mq(md) {
+				padding-left: 50px;
+			}
 		}
 
 		&::placeholder {

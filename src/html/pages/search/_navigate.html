@@ -1,7 +1,30 @@
 <div class="search-navigate">
     <form class="form" data-form-search>
+        <div>
+            <span class="sr-only">Искать в категориях</span>
+            <ul class="search-navigate__items">
+                <li class="search-navigate__item">
+                    <label class="search-navigate__item">
+                        <input class="search-navigate__hidden" type="radio" name="search-category" value="website">
+                        <span class="search-navigate__visible button">По сайту</span>
+                    </label>
+                </li>
+                <li class="search-navigate__item">
+                    <label class="search-navigate__item">
+                        <input class="search-navigate__hidden" type="radio" name="search-category" value="articles">
+                        <span class="search-navigate__visible button">По статьям</span>
+                    </label>
+                </li>
+                <li class="search-navigate__item">
+                    <label class="search-navigate__item">
+                        <input class="search-navigate__hidden" type="radio" name="search-category" value="authors">
+                        <span class="search-navigate__visible button">По авторам</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
         <div class="form__item form__item--search">
-            <label class="sr-only" for="search">Поиск по сайту</label>
+            <label class="sr-only" for="search">Что именно вы хотите найти</label>
             <input class="form__field form__field--search" id="search" name="search" type="search" placeholder="Поиск по ключевым словам, авторам и  материалам" required>
             <button class="form__button form__button--search" type="submit" aria-label="Найти" disabled>
                 <svg aria-hidden>
@@ -10,21 +33,4 @@
             </button>
         </div>
     </form>
-    <ul class="search-navigate__items">
-        <li class="search-navigate__item">
-            <button class="search-navigate__button button" type="button">
-                По сайту
-            </button>
-        </li>
-        <li class="search-navigate__item">
-            <button class="search-navigate__button button" type="button">
-                По статьям
-            </button>
-        </li>
-        <li class="search-navigate__item">
-            <button class="search-navigate__button button" type="button">
-                По авторам
-            </button>
-        </li>
-    </ul>
 </div>

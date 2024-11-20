@@ -1,6 +1,6 @@
 .search-navigate {
 	.form {
-		margin-bottom: 20px;
+		@include flex-simple(20px, column-reverse);
 
 		&__field {
 			font-size: 16px;
@@ -23,6 +23,12 @@
 		}
 	}
 
-	&__item {
+	&__hidden {
+		@include hidden;
+
+		&:checked + .search-navigate__visible {
+			background-color: var(--color-orange-400);
+			pointer-events: none;
+		}
 	}
 }
