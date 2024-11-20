@@ -1,6 +1,6 @@
 import JustValidate from "just-validate";
 
-const forms = document.querySelectorAll('.form')
+const forms = document.querySelectorAll("[data-form-validate]")
 
 forms.forEach(form => {
     const buttonSubmit = form.querySelector('.form__button');
