@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- base meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Совет</title>
+    <meta name="description" content="Описание текщей страницы">
+    
+    <meta name="keywords" content="это, ключевые, запросы, текщей страницы">
+    
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Совет">
+    <meta property="og:description" content="Описание текщей страницы">
+    <meta property="og:image" content=""> <!-- min: 600 * 315, perfect: 1200 * 630 -->
+    <meta property="og:url" content="@url"> <!-- URL вашей страницы -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Совет">
+    <meta name="twitter:description" content="Описание текщей страницы">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <!-- svg иконка 180 * 180 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!--180 * 180-->
+    <!-- если favicon только в png, то подключить favicon-16x16.png favicon-32x32.png (можно в webmanifest) -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- stlyes, js -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="body">
+    <div class="wrapper @wrapper">
+
+<header class="header header--fixed">
+    <div class="header__container">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__logo logo" href="./">
+                    <img class="logo__img" src="img/logos/sj.svg" alt="Логотип научного журнала" width="191" height="42">
+                </a>
+
+                <div class="burger-menu" id="header-burger-menu" data-menu>
+                    <ul class="burger-menu__items">
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./about.html" data-menu-link>
+                                О журнале
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./council.html" data-menu-link>
+                                Совет
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./releases.html" data-menu-link>
+                                Выпуски
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./release.html" data-menu-link>
+                                Поиск
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./all-news.html" data-menu-link>
+                                Новости
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="burger-menu__account">
+                        <button class="burger-menu__button" data-graph-path="modal-sign-up-form" type="button" data-menu-link>
+                            Регистрация
+                        </button>
+                        <button class="burger-menu__button" data-graph-path="modal-sign-in-form" type="button" data-menu-link>
+                            Войти
+                        </button>
+                    </div>
+                </div>
+
+                <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger-button>
+                    <span class="burger-button__line" aria-hidden></span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-sign-in-form">
+    <div class="graph-modal__box">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form" data-form-validate>
+            <span class="form__title">
+                Вход
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="sign-in-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="sign-in-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="sign-in-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-in-email-error"></div>
+                </div>
+
+                
+                <div class="form__item">
+                    <label class="sr-only" for="sign-in-email">
+                        Введите пароль
+                    </label>
+                    <input class="form__field" id="sign-in-email" name="password" type="password" placeholder="Пароль" autocomplete="current-password" aria-describedby="sign-in-password-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-in-password-error"></div>
+                </div>
+                
+            </div>
+            <button class="form__button button" type="submit" disabled>Войти</button>
+
+            
+            <button class="form__text" data-graph-path="modal-restore-form" type="button">
+                Напомнить лоигн/пароль
+            </button>
+            
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-sign-up-form">
+    <div class="graph-modal__box">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form" data-form-validate>
+            <span class="form__title">
+                Регистрация
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="sign-up-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="sign-up-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="sign-up-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-up-email-error"></div>
+                </div>
+
+                
+                <div class="form__item">
+                    <label class="sr-only" for="sign-up-email">
+                        Введите пароль
+                    </label>
+                    <input class="form__field" id="sign-up-email" name="password" type="password" placeholder="Пароль" autocomplete="new-password" aria-describedby="sign-up-password-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-up-password-error"></div>
+                </div>
+                
+            </div>
+            <button class="form__button button" type="submit" disabled>Зарегистрироваться</button>
+
+            
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-restore-form">
+    <div class="graph-modal__box">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form" data-form-validate>
+            <span class="form__title">
+                Восстановление доступа
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="restore-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="restore-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="restore-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="restore-email-error"></div>
+                </div>
+
+                
+            </div>
+            <button class="form__button button" type="submit" disabled>Восстановить</button>
+
+            
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-registration-success">
+    <div class="graph-modal__box">
+        <span class="graph-modal__title">
+            Регистрация
+        </span>
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__text">
+             <p> Спасибо, мы отправили письмо с инструкциями на вашу электронную почту </p> 
+        </div>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-restore-access-success">
+    <div class="graph-modal__box">
+        <span class="graph-modal__title">
+            Восстановление доступа
+        </span>
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__text">
+             <p> Отправили письмо с восстановлением на вашу электронную почту </p> 
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="page-head">
+    <div class="container">
+        
+        <h1 class="page-head__title">Совет</h1>
+        
+        
+    </div>
+</div>
+
+<main class="main">
+    <section class="council-block">
+    <h2 class="sr-only">
+        Информация о Главном редакторе и Заметителе главного редактора
+    </h2>
+    <div class="container">
+        <div class="council-block__wrapper">
+            <div class="council-block__editor">
+                <h3 class="council-block__subtitle subtitle">
+                    Главный редактор
+                </h3>
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/0.avif" type="image/avif">
+        <source srcset="img/people/authors/0.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/0.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </div>
+            <div class="council-block__editor">
+                <h3 class="council-block__subtitle subtitle">
+                    Зам. главного редактора
+                </h3>
+                <div class="swiper-controls">
+                    <button class="swiper-controls__button swiper-controls__button--prev" type="button"></button>
+                    <button class="swiper-controls__button swiper-controls__button--next" type="button"></button>
+                </div>
+                <div class="council-block__swiper swiper">
+                    <ul class="council-block__list swiper-wrapper">
+                        <li class="council-block__slider swiper-slide">
+                            <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/2.avif" type="image/avif">
+        <source srcset="img/people/authors/2.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/2.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+                        </li>
+                        <li class="council-block__slider swiper-slide">
+                            <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/2.avif" type="image/avif">
+        <source srcset="img/people/authors/2.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/2.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+                        </li>
+                        <li class="council-block__slider swiper-slide">
+                            <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/2.avif" type="image/avif">
+        <source srcset="img/people/authors/2.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/2.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="people-block">
+    <div class="container">
+        <h2 class="people-block__title title">Редакционная коллегия</h2>
+        <ul class="people-block__list spollers">
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/1.avif" type="image/avif">
+        <source srcset="img/people/authors/1.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/1.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/no-photo.avif" type="image/avif">
+        <source srcset="img/people/authors/no-photo.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/no-photo.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/3.avif" type="image/avif">
+        <source srcset="img/people/authors/3.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/3.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/4.avif" type="image/avif">
+        <source srcset="img/people/authors/4.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/4.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/2.avif" type="image/avif">
+        <source srcset="img/people/authors/2.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/2.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section class="people-block">
+    <div class="container">
+        <h2 class="people-block__title title">Редакционный совет</h2>
+        <ul class="people-block__list spollers">
+            <li class="people-block__item">
+
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/1.avif" type="image/avif">
+        <source srcset="img/people/authors/1.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/1.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/2.avif" type="image/avif">
+        <source srcset="img/people/authors/2.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/2.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+            <li class="people-block__item">
+                <article class="people-card card">
+    <picture>
+        <source srcset="img/people/authors/2.avif" type="image/avif">
+        <source srcset="img/people/authors/2.webp" type="image/webp">
+        <img class="people-card__img" src="img/people/authors/2.jpg" alt="Автор @author" width="120" height="120" loading="lazy">
+    </picture>
+
+    <div class="people-card__text">
+        <span class="people-card__name caption">Агафонова Маргарита Сергеевна</span>
+        <dl class="people-card__items">
+            <dt>Город:</dt>
+            <dd>Воронеж</dd><br>
+            <dt>Степень:</dt>
+            <dd>Кандидат экономических наук</dd><br>
+            <dt>Место работы:</dt>
+            <dd>АНОО ВО «Воронежский экономико-правовой институт»</dd><br>
+            <dt>Должность:</dt>
+            <dd>Заведующий кафедрой прикладной информатики</dd><br>
+        </dl>
+    </div>
+</article>
+            </li>
+        </ul>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__partners">
+            <a class="footer__logo logo logo--mp" href="https://edu.gov.ru" target="_blank">
+                <img class="logo__img" src="img/logos/mp.svg" alt="Логотип Министерства Просвещения Российской Федерации" width="207" height="88">
+            </a>
+            <a class="footer__logo logo logo--cpi" href="https://mpcenter.ru" target="_blank">
+                <img class="logo__img" src="img/logos/cpi.svg" alt="Логотип Центра Просветительских Инициатив" width="247" height="54">
+            </a>
+        </div>
+        <address class="footer__text">
+            <p>
+                Зарегистрирован в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций.
+            </p>
+            <p>
+                Регистрационный номер и дата принятия решения о регистрации: серия Эл № ФС77-78575 от 08 июля 2020 г Научно-методическому журналу присвоен международный код ISSN 2304-120X
+            </p>
+        </address>
+    </div>
+</footer>
+</div>
+</body>
+  
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- base meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости | Научный журнал</title>
+    <meta name="description" content="Описание текщей страницы">
+    
+    <meta name="keywords" content="это, ключевые, запросы, текщей страницы">
+    
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Новости | Научный журнал">
+    <meta property="og:description" content="Описание текщей страницы">
+    <meta property="og:image" content=""> <!-- min: 600 * 315, perfect: 1200 * 630 -->
+    <meta property="og:url" content="@url"> <!-- URL вашей страницы -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Новости | Научный журнал">
+    <meta name="twitter:description" content="Описание текщей страницы">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <!-- svg иконка 180 * 180 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!--180 * 180-->
+    <!-- если favicon только в png, то подключить favicon-16x16.png favicon-32x32.png (можно в webmanifest) -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- stlyes, js -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="body">
+    <div class="wrapper @wrapper">
+
+<header class="header header--fixed">
+    <div class="header__container">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__logo logo" href="./">
+                    <img class="logo__img" src="img/logos/sj.svg" alt="Логотип научного журнала" width="191" height="42">
+                </a>
+
+                <div class="burger-menu" id="header-burger-menu" data-menu>
+                    <ul class="burger-menu__items">
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./about.html" data-menu-link>
+                                О журнале
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./council.html" data-menu-link>
+                                Совет
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./releases.html" data-menu-link>
+                                Выпуски
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./release.html" data-menu-link>
+                                Поиск
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./all-news.html" data-menu-link>
+                                Новости
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="burger-menu__account">
+                        <button class="burger-menu__button" data-graph-path="modal-sign-up-form" type="button" data-menu-link>
+                            Регистрация
+                        </button>
+                        <button class="burger-menu__button" data-graph-path="modal-sign-in-form" type="button" data-menu-link>
+                            Войти
+                        </button>
+                    </div>
+                </div>
+
+                <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger-button>
+                    <span class="burger-button__line" aria-hidden></span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-sign-in-form">
+    <div class="graph-modal__box">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form" data-form-validate>
+            <span class="form__title">
+                Вход
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="sign-in-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="sign-in-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="sign-in-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-in-email-error"></div>
+                </div>
+
+                
+                <div class="form__item">
+                    <label class="sr-only" for="sign-in-email">
+                        Введите пароль
+                    </label>
+                    <input class="form__field" id="sign-in-email" name="password" type="password" placeholder="Пароль" autocomplete="current-password" aria-describedby="sign-in-password-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-in-password-error"></div>
+                </div>
+                
+            </div>
+            <button class="form__button button" type="submit" disabled>Войти</button>
+
+            
+            <button class="form__text" data-graph-path="modal-restore-form" type="button">
+                Напомнить лоигн/пароль
+            </button>
+            
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-sign-up-form">
+    <div class="graph-modal__box">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form" data-form-validate>
+            <span class="form__title">
+                Регистрация
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="sign-up-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="sign-up-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="sign-up-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-up-email-error"></div>
+                </div>
+
+                
+                <div class="form__item">
+                    <label class="sr-only" for="sign-up-email">
+                        Введите пароль
+                    </label>
+                    <input class="form__field" id="sign-up-email" name="password" type="password" placeholder="Пароль" autocomplete="new-password" aria-describedby="sign-up-password-error" required>
+                    <div class="form__error sr-only" role="alert" id="sign-up-password-error"></div>
+                </div>
+                
+            </div>
+            <button class="form__button button" type="submit" disabled>Зарегистрироваться</button>
+
+            
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-restore-form">
+    <div class="graph-modal__box">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+
+        <form class="form" data-form-validate>
+            <span class="form__title">
+                Восстановление доступа
+            </span>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="restore-email">
+                        Введите свою электронную почту
+                    </label>
+                    <input class="form__field" id="restore-email" name="email" type="email" placeholder="Ваш e-mail" autocomplete="email" aria-describedby="restore-email-error" required>
+                    <div class="form__error sr-only" role="alert" id="restore-email-error"></div>
+                </div>
+
+                
+            </div>
+            <button class="form__button button" type="submit" disabled>Восстановить</button>
+
+            
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-registration-success">
+    <div class="graph-modal__box">
+        <span class="graph-modal__title">
+            Регистрация
+        </span>
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__text">
+             <p> Спасибо, мы отправили письмо с инструкциями на вашу электронную почту </p> 
+        </div>
+    </div>
+</div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-restore-access-success">
+    <div class="graph-modal__box">
+        <span class="graph-modal__title">
+            Восстановление доступа
+        </span>
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__text">
+             <p> Отправили письмо с восстановлением на вашу электронную почту </p> 
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="page-head">
+    <div class="container">
+        
+        <h1 class="page-head__title">Новости</h1>
+        
+        
+    </div>
+</div>
+
+<main class="main">
+    <section class="news">
+    <div class="container">
+        <h2 class="sr-only">Карточки с новостями</h2>
+        <ul class="news__items">
+            <li class="news__item">
+                <article class="news-card">
+    <time class="news-card__date" datetime="2025-11-20"> 20.11.25 </time>
+    <h3 class="news-card__title caption">
+        <a href="@href">Моторные и сенсорные вызванные потенциалы при коррекции сколиотической деформации</a>
+    </h3>
+    <div class="news-card__text">
+         <p> Полученное аналитически значение оптимального уровня управляющих воздействий (с их стоимостью ), вообще говоря, является оптимальным лишь асимптотически. На переходных режимах (при отсутствии стационарности интенсивности входных потоков и потоков обслуживания) применяется метод стохастического имитационного моделирования, который позволяет скорректировать значение уровня. </p> 
+    </div>
+</article>
+            </li>
+            <li class="news__item ">
+                <article class="news-card">
+    <time class="news-card__date" datetime="2025-12-28"> 28.12.25 </time>
+    <h3 class="news-card__title caption">
+        <a href="@href">Анализ корреляции между уровнем сывороточного тромбоцитарного фактора роста</a>
+    </h3>
+    <div class="news-card__text">
+         <p> Все поступающие статьи проходят внутреннюю проверку на соответствие тематике журнала и оригинальность результатов, проверяются на заимствование из открытых источников, проходят процедуру двойного слепого рецензирования экспертами журнала. Рекомендуем авторам до отправки статьи тщательно проверить содержательную и техническую стороны рукописи. </p> 
+    </div>
+</article>
+            </li>
+            <li class="news__item">
+                <article class="news-card">
+    <time class="news-card__date" datetime="2026-01-16"> 16.01.26 </time>
+    <h3 class="news-card__title caption">
+        <a href="@href">Система управления частотно-регулируемым электроприводом вентиляторов установок охлаждения</a>
+    </h3>
+    <div class="news-card__text">
+         <p> Оцениваемая частота встречаемости составляет примерно 1 случай на 6–11 тысяч новорожденных. Заболевание связано с дефицитом белка выживания моторных нейронов (SMN) в случае гомозиготной делеции гена SMN1, что приводит к потере альфа-мотонейронов. Существуют несколько типов СМА у детей, которые различаются в зависимости от возраста, начала заболевания и достигнутого объема двигательных функций. </p> 
+    </div>
+</article>
+            </li>
+            <li class="news__item">
+                <article class="news-card">
+    <time class="news-card__date" datetime="2026-08-23"> 23.08.26 </time>
+    <h3 class="news-card__title caption">
+        <a href="@href">Динамика линейных макропоказателей кросса «Смена-7» в норме и при применении «Гамавита» и «Фоспренила»</a>
+    </h3>
+    <div class="news-card__text">
+         <p> В представленной модели вероятность того, что в двигателе существуют невыявленные неисправности или дефекты, с которыми он может эксплуатироваться, строго положительна при заданных ограничениях для параметров. Это может вызвать более многочисленные повреждения ГТД, вследствие чего может даже наступить отказ и остановка двигателя. </p> 
+    </div>
+</article>
+            </li>
+            <li class="news__item">
+                <article class="news-card">
+    <time class="news-card__date" datetime="2026-12-28"> 28.12.26 </time>
+    <h3 class="news-card__title caption">
+        <a href="@href">Система принятия управленческих решений для обеспечения оптимального уровня безопасности полётов</a>
+    </h3>
+    <div class="news-card__text">
+         <p> В работе рассматривается модель, описывающая возникновение отказов (неисправностей) в авиационных ГТД. При этом принято допущение о том, что интенсивность возникновения отказов и неисправностей снижается для каждого из двигателей линейно в зависимости от уровня затрат на управляющее воздействие. Коэффициент пропорциональности в этой линейной зависимости определяется экспертно. </p> 
+    </div>
+</article>
+            </li>
+            <li class="news__item">
+                <article class="news-card">
+    <time class="news-card__date" datetime="2025-11-20"> 20.11.25 </time>
+    <h3 class="news-card__title caption">
+        <a href="@href">Моторные и сенсорные вызванные потенциалы при коррекции сколиотической деформации</a>
+    </h3>
+    <div class="news-card__text">
+         <p> Полученное аналитически значение оптимального уровня управляющих воздействий (с их стоимостью ), вообще говоря, является оптимальным лишь асимптотически. На переходных режимах (при отсутствии стационарности интенсивности входных потоков и потоков обслуживания) применяется метод стохастического имитационного моделирования, который позволяет скорректировать значение уровня. </p> 
+    </div>
+</article>
+            </li>
+        </ul>
+
+        <button class="news__button button" type="button">
+            Показать ещё
+        </button>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__partners">
+            <a class="footer__logo logo logo--mp" href="https://edu.gov.ru" target="_blank">
+                <img class="logo__img" src="img/logos/mp.svg" alt="Логотип Министерства Просвещения Российской Федерации" width="207" height="88">
+            </a>
+            <a class="footer__logo logo logo--cpi" href="https://mpcenter.ru" target="_blank">
+                <img class="logo__img" src="img/logos/cpi.svg" alt="Логотип Центра Просветительских Инициатив" width="247" height="54">
+            </a>
+        </div>
+        <address class="footer__text">
+            <p>
+                Зарегистрирован в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций.
+            </p>
+            <p>
+                Регистрационный номер и дата принятия решения о регистрации: серия Эл № ФС77-78575 от 08 июля 2020 г Научно-методическому журналу присвоен международный код ISSN 2304-120X
+            </p>
+        </address>
+    </div>
+</footer>
+</div>
+</body>
+  
+</html>
