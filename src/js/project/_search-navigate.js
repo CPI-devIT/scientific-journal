@@ -1,6 +1,6 @@
 const searchNavigateButtons = () => {
-    const form = document.querySelector('[data-form-search]')
-    const buttons = document.querySelectorAll('.search-navigate__button');
+    const form = document.querySelector('[data-form-search]');
+    const radioButtons = document.querySelectorAll('.search-navigate__hidden');
     const searchField = form.querySelector('.form__field--search');
     const submitButton = form.querySelector('.form__button--search');
 
@@ -14,21 +14,29 @@ const searchNavigateButtons = () => {
         }
     }
 
-    console.dir(searchField)
+    if (searchField && submitButton) {
+        searchField.addEventListener('input', changeValueHandler)
+    }
 
-    if (form && buttons && searchField) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault()
-            console.log('form submitted')
-        })
-
-        buttons.forEach((button) => {
-            button.addEventListener('click', () => {
-                searchField.value = button.innerText
+    if (radioButtons && searchField) {
+        radioButtons.forEach((radioButton) => {
+            radioButton.addEventListener('change', (event) => {
+                console.log(event.currentTarget.value)
+                let newPlaceholder = '';
+                switch (event.currentTarget.value) {
+                    case 'website':
+                        newPlaceholder = 'Искать по сайту'
+                        break
+                    case 'authors':
+                        newPlaceholder = 'Искать по авторам'
+                        break
+                    case 'articles':
+                        newPlaceholder = 'Искать по статьям'
+                        break
+                }
+                searchField.placeholder = newPlaceholder
             })
         })
-
-        searchField.addEventListener('input', changeValueHandler)
     }
 }
 

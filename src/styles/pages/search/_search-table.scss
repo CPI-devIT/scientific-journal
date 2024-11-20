@@ -1,0 +1,80 @@
+.search-result {
+	overflow-y: auto;
+	border-collapse: collapse;
+	border-radius: 30px;
+	background-color: var(--color-white);
+
+	&__sort {
+		position: relative;
+		border-radius: 50%;
+		width: 24px;
+		height: 24px;
+		background-color: var(--rgba-brown-350);
+
+		&::after {
+			@include bg-properties(contain);
+
+			content: '';
+			position: absolute;
+			right: 50px;
+			top: 50%;
+			width: 4px;
+			height: 7px;
+			background-image: url('../img/icons/arrow.svg');
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	thead {
+		border-radius: 30px;
+		background-color: var(--color-orange-100);
+
+		th {
+			padding: 18px 35px;
+			text-align: left;
+
+			div {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+			}
+		}
+
+		.search-result {
+			&__publication {
+				background-color: var(--rgba-orange-20);
+			}
+		}
+	}
+
+	tbody {
+		td {
+			vertical-align: top;
+			padding: 35px;
+		}
+
+		tr {
+			&:not(:last-child) {
+				td {
+					border-bottom: 1px solid var(--color-orange-250);
+				}
+			}
+		}
+	}
+
+	&__authors {
+		width: 250px;
+	}
+
+	&__publication {
+		width: 640px;
+	}
+
+	&__releases {
+		width: 200px;
+	}
+
+	&__pages {
+		width: 200px;
+	}
+}
