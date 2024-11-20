@@ -12,10 +12,6 @@
 		width: 100%;
 
 		@include mq(lg) {
-			gap: 20px 15px;
-		}
-
-		@include mq(md) {
 			display: none;
 		}
 	}

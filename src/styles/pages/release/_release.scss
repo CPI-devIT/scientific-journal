@@ -1,0 +1,20 @@
+.release-page {
+	.page-head {
+		&__link {
+			@include mq(lg) {
+				display: flex;
+				margin: 0 auto 26px;
+				max-width: max-content;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		text-align: left;
+	}
+
+	&__items {
+		@include flex-simple(20px, column);
+	}
+}

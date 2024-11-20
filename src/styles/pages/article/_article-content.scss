@@ -1,0 +1,47 @@
+.article-content {
+	&__title {
+		text-align: left;
+	}
+
+	&__body {
+		@include flex-simple(20px, column);
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		strong {
+			display: inline-block;
+			margin-bottom: 5px;
+			font-weight: 600;
+			font-size: 16px;
+			color: var(--color-dark-800);
+		}
+	}
+
+	&__authors {
+		color: var(--color-dark-400);
+	}
+
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px;
+
+		a {
+			@include link;
+
+			text-decoration: underline;
+		}
+	}
+
+	&__pdf {
+		width: 100%;
+		height: 86vh;
+
+		embed {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

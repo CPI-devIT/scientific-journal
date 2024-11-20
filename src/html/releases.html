@@ -12,7 +12,10 @@
 
 <h1 class="sr-only">Все наши выпуски</h1>
 <main class="main">
-    @include('./pages/releases/_releases.html')
+    <section class="releases-page">
+        @include('./pages/releases/_releases-header.html')
+        @include('./pages/releases/_releases-body.html')
+    </section>
 </main>
 
 @include('./components/blocks/_footer.html')

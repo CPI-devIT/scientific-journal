@@ -23,7 +23,6 @@ const statistics = () => {
         };
 
         const increase = () => {
-            console.dir(window)
             const positionUser = window.scrollY; // где мы сейчас
             const heightScreen = window.innerHeight; // высота экрана
             

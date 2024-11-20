@@ -1,9 +1,10 @@
 @include('./settings/_head.html', {
-'title' : 'Выпуск',
+'title' : 'Выпуск | Научный журнал',
 'description' : 'Описание текщей страницы',
 'keywords' : 'это, ключевые, запросы, текщей страницы',
 'robots' : 'index, follow',
 'ogImage' : '',
+'wrapper': 'wrapper--without-overflow'
 })
 
 @include('./components/blocks/_header.html')
@@ -13,14 +14,14 @@
 <h1 class="sr-only">Выпуск №</h1>
 <main class="main">
     <section class="release-page">
-        @include('./pages/release/_header.html')
+        @include('./pages/release/_release-header.html')
         <div class="container">
             <div class="page-wrapper">
                 <div class="page-wrapper__menu">
-                    @include('./pages/release/_menu.html')
+                    @include('./pages/release/_release-menu.html')
                 </div>
                 <div class="page-wrapper__content">
-                    @include('./pages/release/_release.html')
+                    @include('./pages/release/_release-body.html')
                 </div>
             </div>
         </div>

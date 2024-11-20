@@ -4,23 +4,23 @@
             Назад к выпускам
         </a>
         <div class="page-head__mobile">
-            <label class="sr-only" for="releases-years">
+            <label class="sr-only" for="release-category">
                 Выберите категорию
             </label>
-            <select id="releases-years" name="releases-category" data-choice>
-                <option value="all">
+            <select id="release-category" name="releases-category" data-choice>
+                <option value="all" data-filter="all" data-toggle>
                     Все разделы
                 </option>
-                <option value="clinical-medicine">
+                <option value="clinical-medicine" data-filter=".release-medicine" data-toggle>
                     Клиническая медицина
                 </option>
-                <option value="life-sciences-and-research">
+                <option value="life-sciences-and-research" data-filter=".release-biomedical" data-toggle>
                     Медико-биологические науки и исследования
                 </option>
-                <option value="reviews-the-clinical-picture">
+                <option value="reviews-the-clinical-picture" data-filter=".release-reviews-clinical-picture" data-toggle>
                     Обзоры клинической картины
                 </option>
-                <option value="pedagogy">
+                <option value="pedagogy" data-filter=".release-pedagogy" data-toggle>
                     Педагогика
                 </option>
             </select>

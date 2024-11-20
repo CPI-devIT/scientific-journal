@@ -53,31 +53,23 @@
 	}
 
 	&__items {
-		margin-bottom: 65px;
+		@include flex-simple(16px, column);
 
 		&:not(:last-child) {
+			margin-bottom: 65px;
+
 			@include mq(md) {
 				margin-bottom: 25px;
 			}
 		}
 
-		dd {
-			&:not(:last-child) {
-				margin-bottom: 25px;
-
-				@include mq(md) {
-					margin-bottom: 8px;
-				}
-			}
+		li {
+			@include flex-simple(6px, column);
 		}
 
-		dt {
+		strong {
 			font-weight: 600;
 			font-size: 16px;
-
-			&:not(:last-child) {
-				margin-bottom: 4px;
-			}
 		}
 	}
 
