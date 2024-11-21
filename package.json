@@ -13,6 +13,7 @@
 		"fonts": "gulp fonts",
 		"images": "gulp buildImages --production",
 		"resources": "gulp resources",
+		"assets": "gulp assets",
 		"deploy": "gulp deploy",
 		"start": "serve \"./app\"",
 		"test:html-w3c-validator": "start-server-and-test \"start\" \"http://127.0.0.1:3000\" \"html-w3c-validator\""
