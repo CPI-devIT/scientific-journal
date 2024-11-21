@@ -1,8 +1,8 @@
 const searchNavigateButtons = () => {
     const form = document.querySelector('[data-form-search]');
     const radioButtons = document.querySelectorAll('.search-navigate__hidden');
-    const searchField = form.querySelector('.form__field--search');
-    const submitButton = form.querySelector('.form__button--search');
+    const searchField = form?.querySelector('.form__field--search');
+    const submitButton = form?.querySelector('.form__button--search');
 
     const changeValueHandler = (event) => {
         const value = event.currentTarget.value

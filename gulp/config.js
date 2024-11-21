@@ -74,7 +74,12 @@ export const paths = {
         watch: `${devFolder}/fonts/**/*`,
     },
     resources: {
-        src: `${devFolder}/resources/**`
+        src: `${devFolder}/resources-root/**`
+    },
+    assets: {
+        src: `${devFolder}/assets/**`,
+        app: `${productFolder}/assets/`,
+        watch: `${devFolder}/assets/`
     },
     devFolder,
     productFolder,

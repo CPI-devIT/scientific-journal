@@ -1,27 +1,65 @@
 .search-result {
-	overflow-y: auto;
-	border-collapse: collapse;
-	border-radius: 30px;
-	background-color: var(--color-white);
+	&__content {
+		overflow-x: auto;
+		padding-bottom: 10px;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__table {
+		border-collapse: collapse;
+		border-radius: 30px;
+		width: 100%;
+		min-width: 900px;
+		background-color: var(--color-white);
+	}
 
 	&__sort {
 		position: relative;
+		outline: 0;
 		border-radius: 50%;
 		width: 24px;
 		height: 24px;
 		background-color: var(--rgba-brown-350);
+		transition:
+			background-color 0.3s,
+			box-shadow 0.3s,
+			transform 0.3s;
 
-		&::after {
+		&:focus-visible {
+			box-shadow: var(--focus-shadow);
+			background-color: var(--color-white);
+
+			&::before {
+				filter: invert(92%) sepia(16%) saturate(5807%) hue-rotate(41deg)
+					brightness(96%) contrast(103%);
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-dark-600);
+			}
+		}
+
+		&--down {
+			transform: rotate(180deg);
+		}
+
+		&::before {
 			@include bg-properties(contain);
 
 			content: '';
 			position: absolute;
-			right: 50px;
+			right: 50%;
 			top: 50%;
-			width: 4px;
-			height: 7px;
+			width: 6px;
+			height: 12px;
 			background-image: url('../img/icons/arrow.svg');
-			transform: translate(-50%, -50%);
+			transform: translate(50%, -50%) rotate(90deg);
+			transition: filter 0.3s;
 		}
 	}
 
@@ -32,6 +70,14 @@
 		th {
 			padding: 18px 35px;
 			text-align: left;
+
+			&:first-child {
+				border-top-left-radius: 30px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 30px;
+			}
 
 			div {
 				display: flex;
@@ -54,27 +100,66 @@
 		}
 
 		tr {
+			position: relative;
+			z-index: 1;
+
 			&:not(:last-child) {
-				td {
-					border-bottom: 1px solid var(--color-orange-250);
+				.search-result__publication {
+					a {
+						&::after {
+							border-bottom: 1px solid var(--color-orange-250);
+						}
+					}
+				}
+			}
+
+			&:last-child {
+				.search-result__publication {
+					a {
+						&::before {
+							border-radius: 0 0 30px 30px;
+						}
+					}
 				}
 			}
 		}
 	}
 
 	&__authors {
-		width: 250px;
+		width: 19.3%;
 	}
 
 	&__publication {
-		width: 640px;
+		width: 49.5%;
+
+		a {
+			@include link;
+
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						background-color: var(--color-blue-100);
+					}
+				}
+			}
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+			}
+
+			&::before {
+				z-index: -1;
+				background-color: transparent;
+				transition: background-color 0.3s;
+			}
+		}
 	}
 
-	&__releases {
-		width: 200px;
-	}
-
+	&__releases,
 	&__pages {
-		width: 200px;
+		width: 15.6%;
 	}
 }
