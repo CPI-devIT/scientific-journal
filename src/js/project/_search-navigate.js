@@ -6,7 +6,6 @@ const searchNavigateButtons = () => {
 
     const changeValueHandler = (event) => {
         const value = event.currentTarget.value
-        console.log(value)
         if (!!value) {
             submitButton.removeAttribute('disabled')
         } else {
@@ -21,7 +20,6 @@ const searchNavigateButtons = () => {
     if (radioButtons && searchField) {
         radioButtons.forEach((radioButton) => {
             radioButton.addEventListener('change', (event) => {
-                console.log(event.currentTarget.value)
                 let newPlaceholder = '';
                 switch (event.currentTarget.value) {
                     case 'website':

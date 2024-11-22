@@ -3,6 +3,7 @@
 
 	position: relative;
 	width: 100%;
+	color: var(--color-blue-500);
 
 	@include mq(md) {
 		padding: 85px 35px 25px;
@@ -24,7 +25,10 @@
 	}
 
 	&__text {
-		width: 100%;
-		color: var(--color-blue-500);
+		p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
 	}
 }
