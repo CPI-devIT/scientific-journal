@@ -9,8 +9,6 @@
     <title>Поиск по сайту | Научный журнал</title>
     <meta name="description" content="Описание текщей страницы">
     
-    <meta name="keywords" content="это, ключевые, запросы, текщей страницы">
-    
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
@@ -26,12 +24,13 @@
     <meta name="twitter:image" content="">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <!-- <link rel="icon" href="favicon.ico" sizes="32x32"> -->
     <!-- svg иконка 180 * 180 -->
-    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!--180 * 180-->
+    <!-- <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">  -->
+    <!--180 * 180-->
     <!-- если favicon только в png, то подключить favicon-16x16.png favicon-32x32.png (можно в webmanifest) -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
 
     <!-- stlyes, js -->
     <link rel="stylesheet" href="css/style.css">
@@ -67,6 +66,11 @@
                             </a>
                         </li>
                         <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="./authors.html" data-menu-link>
+                                Авторам
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
                             <a class="burger-menu__link" href="./search.html" data-menu-link>
                                 Поиск
                             </a>
@@ -96,12 +100,13 @@
     </div>
 </header>
 
+
 <div class="graph-modal">
     <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-sign-in-form">
     <div class="graph-modal__box">
         <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
 
-        <form class="form" data-form-validate>
+        <form class="form" id="modal-sign-in-form" data-form-validate>
             <span class="form__title">
                 Вход
             </span>
@@ -139,7 +144,7 @@
     <div class="graph-modal__box">
         <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
 
-        <form class="form" data-form-validate>
+        <form class="form" id="modal-sign-up-form" data-form-validate>
             <span class="form__title">
                 Регистрация
             </span>
@@ -173,7 +178,7 @@
     <div class="graph-modal__box">
         <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
 
-        <form class="form" data-form-validate>
+        <form class="form" id="modal-restore-form" data-form-validate>
             <span class="form__title">
                 Восстановление доступа
             </span>
@@ -215,6 +220,28 @@
         <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__text">
              <p> Отправили письмо с восстановлением на вашу электронную почту </p> 
+        </div>
+    </div>
+</div>
+
+    <div class="graph-modal__container notice" role="dialog" aria-modal="true" data-graph-target="modal-sign-in-info">
+    <div class="graph-modal__box">
+        <div class="graph-modal__info">
+            <span class="notice__title caption">
+                Куда ещё можно войти с этим паролем?
+            </span>
+            <ul class="notice__list">
+                <li class="notice__item">
+                    <a class="notice__link" href="https://nayka.mpcenter.ru" target="_blank">
+                        Научная Конференция
+                    </a>
+                </li>
+                <li class="notice__item">
+                    <a class="notice__link" href="https://nayka.mpcenter.ru" target="_blank">
+                        Научная Конференция
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
@@ -280,25 +307,25 @@
                     <th class="search-result__authors">
                         <div>
                             Авторы
-                            <button class="search-result__sort" type="button"></button>
+                            <button class="search-result__sort" type="button" aria-sort="ascending" aria-label="Сортировать авторов по алфавиту от А к Я" data-ascending="Сортировать авторов по алфавиту от А к Я" data-descending="Сортировать авторов по алфавиту от Я к А"></button>
                         </div>
                     </th>
                     <th class="search-result__publication">
                         <div>
                             Публикация
-                            <button class="search-result__sort" type="button"></button>
+                            <button class="search-result__sort" type="button" aria-sort="ascending" aria-label="Сортировать публикации по алфавиту А к Я" data-ascending="Сортировать публикации по алфавиту от А к Я" data-descending="Сортировать публикации по алфавиту от Я к А"></button>
                         </div>
                     </th>
                     <th class="search-result__releases">
                         <div>
                             Выпуски
-                            <button class="search-result__sort" type="button"></button>
+                            <button class="search-result__sort" type="button" aria-sort="ascending" aria-label="Сортировать по количеству выпусков по возрастанию" data-ascending="Сортировать по количеству выпусков по возрастанию" data-descending="Сортировать по количеству выпусков по убыванию"></button>
                         </div>
                     </th>
                     <th class="search-result__pages">
                         <div>
                             Страницы
-                            <button class="search-result__sort" type="button"></button>
+                            <button class="search-result__sort" type="button" aria-sort="ascending" aria-label="Сортировать по количеству страниц по возрастанию" data-ascending="Сортировать по количеству страниц по возрастанию" data-descending="Сортировать по количеству страниц по убыванию"></button>
                         </div>
                     </th>
                 </tr>

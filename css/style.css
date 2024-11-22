@@ -81,7 +81,8 @@
   --rgba-brown-350: rgba(114, 108, 101, 35);
   --rgba-brown-600: rgba(206, 195, 182, 60);
   --rgba-dark-800-25: rgba(20, 20, 0, 25);
-  --rgba-dark-800-50: rgba(20, 20, 0, 50);
+  --rgba-dark-800-50: rgba(20, 20, 0, 80%);
+  --rgba-blue-500-20: rgba(80, 126, 150, 20%);
   --rgba-orange-20: rgba(253, 216, 161, 0.2);
   --focus-shadow: 0 0 0 2px #e8a852;
   --font-main: "Manrope";
@@ -226,7 +227,7 @@ label {
   display: inline-block;
   display: none;
   vertical-align: middle;
-  margin: 50px auto;
+  margin: 50px 10px;
   width: 100%;
   max-width: 410px;
   text-align: left;
@@ -296,6 +297,33 @@ label {
 
 .graph-modal__text p:not(:last-child) {
   margin-bottom: 8px;
+}
+
+.graph-modal .notice {
+  position: relative;
+  padding: 70px 24px 16px;
+  width: 100%;
+  max-width: 275px;
+  text-align: center;
+}
+
+.graph-modal .notice::before {
+  left: 50%;
+  top: 17px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.graph-modal .notice__title {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.graph-modal .notice__item:not(:last-child) {
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--rgba-blue-500-20);
+  padding-bottom: 7px;
 }
 
 .graph-modal.is-open {
@@ -1838,6 +1866,7 @@ body {
 
 .button:disabled {
   background-color: var(--color-orange-150);
+  pointer-events: none;
 }
 
 .swiper-controls {
@@ -2550,6 +2579,7 @@ body {
   background-color: var(--color-blue-300);
   position: relative;
   width: 100%;
+  color: var(--color-blue-500);
 }
 
 .notice::before {
@@ -2567,9 +2597,8 @@ body {
   background-image: url("../img/icons/bell.svg");
 }
 
-.notice__text {
-  width: 100%;
-  color: var(--color-blue-500);
+.notice__text p:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .article-card {
@@ -3196,21 +3225,6 @@ body {
   gap: 2px;
 }
 
-.article-content__tags a {
-  outline: 0;
-  border-radius: 4px;
-  -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
-  transition: color 0.3s, -webkit-box-shadow 0.3s;
-  transition: color 0.3s, box-shadow 0.3s;
-  transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  text-decoration: underline;
-}
-
-.article-content__tags a:focus-visible {
-  -webkit-box-shadow: var(--focus-shadow);
-  box-shadow: var(--focus-shadow);
-}
-
 .article-content__pdf {
   width: 100%;
   height: 86vh;
@@ -3700,6 +3714,18 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .graph-modal .notice::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 14px solid transparent;
+    border-top: 14px solid var(--color-blue-300);
+    -webkit-transform: rotate(90deg) translate(-50%, 100%);
+    -ms-transform: rotate(90deg) translate(-50%, 100%);
+    transform: rotate(90deg) translate(-50%, 100%);
+  }
+
   .hero__wrapper {
     width: 100%;
     max-width: 563px;
@@ -4007,11 +4033,18 @@ body {
 
   .graph-modal__container {
     width: 90%;
+    max-width: 100%;
   }
 
   .graph-modal__title {
     margin-bottom: 12px;
     font-size: 26px;
+  }
+
+  .graph-modal .notice {
+    margin-top: 0;
+    width: 90%;
+    max-width: 100%;
   }
 
   .large {
@@ -4296,10 +4329,6 @@ body {
   }
 
   .release-card__link:hover {
-    color: var(--color-orange-400);
-  }
-
-  .article-content__tags a:hover {
     color: var(--color-orange-400);
   }
 
