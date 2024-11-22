@@ -4027,6 +4027,10 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .graph-modal--info::before {
+    height: 0;
+  }
+
   .graph-modal__container {
     padding: 70px 24px 60px;
   }

@@ -12759,6 +12759,7 @@ __webpack_require__.r(__webpack_exports__);
 new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]({
   isOpen: function isOpen(modal) {
     if (modal.modalContainer.dataset.graphTarget === 'modal-sign-in-form') {
+      modal.modalContainer.offsetParent.classList.add('graph-modal--info');
       new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]('modal').open('modal-sign-in-info');
     }
   }
@@ -12778,10 +12779,6 @@ var submitFormHandler = function submitFormHandler(formId, nextModalClass) {
     });
   }
 };
-var sendingForm = function sendingForm() {
-  var signInModal = document.querySelector('[data-graph-target="modal-sign-in-form"]');
-};
-sendingForm();
 submitFormHandler('modal-restore-form', 'modal-restore-access-success');
 submitFormHandler('modal-sign-up-form', 'modal-registration-success');
 
