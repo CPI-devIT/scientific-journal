@@ -20,5 +20,6 @@
 
 	&:disabled {
 		background-color: var(--color-orange-150);
+		pointer-events: none;
 	}
 }
