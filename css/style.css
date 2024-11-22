@@ -82,6 +82,7 @@
   --rgba-brown-600: rgba(206, 195, 182, 60);
   --rgba-dark-800-25: rgba(20, 20, 0, 25);
   --rgba-dark-800-50: rgba(20, 20, 0, 50);
+  --rgba-orange-20: rgba(253, 216, 161, 0.2);
   --focus-shadow: 0 0 0 2px #e8a852;
   --font-main: "Manrope";
   --font-secondary: "Geologica";
@@ -3215,7 +3216,7 @@ body {
   height: 86vh;
 }
 
-.article-content__pdf embed {
+.article-content__pdf pdfjs-viewer-element {
   width: 100%;
   height: 100%;
 }
@@ -3423,7 +3424,18 @@ body {
 }
 
 .search-navigate .form {
-  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+.search-navigate .form:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .search-navigate .form__field {
@@ -3462,6 +3474,196 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 7px;
+}
+
+.search-navigate__items label {
+  cursor: default;
+}
+
+.search-navigate__hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.search-navigate__hidden:checked + .search-navigate__visible {
+  background-color: var(--color-orange-400);
+  pointer-events: none;
+}
+
+.search-navigate__visible {
+  cursor: pointer;
+}
+
+.search-navigate__nothing {
+  display: none;
+  color: var(--color-dark-400);
+}
+
+.search-navigate__nothing--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-result__content {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.search-result__content:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.search-result__table {
+  border-collapse: collapse;
+  border-radius: 30px;
+  width: 100%;
+  min-width: 900px;
+  background-color: var(--color-white);
+}
+
+.search-result__sort {
+  position: relative;
+  outline: 0;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--rgba-brown-350);
+  -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+}
+
+.search-result__sort:focus-visible {
+  -webkit-box-shadow: var(--focus-shadow);
+  box-shadow: var(--focus-shadow);
+  background-color: var(--color-white);
+}
+
+.search-result__sort:focus-visible::before {
+  -webkit-filter: invert(92%) sepia(16%) saturate(5807%) hue-rotate(41deg) brightness(96%) contrast(103%);
+  filter: invert(92%) sepia(16%) saturate(5807%) hue-rotate(41deg) brightness(96%) contrast(103%);
+}
+
+.search-result__sort--down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.search-result__sort::before {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 6px;
+  height: 12px;
+  background-image: url("../img/icons/arrow.svg");
+  -webkit-transform: translate(50%, -50%) rotate(90deg);
+  -ms-transform: translate(50%, -50%) rotate(90deg);
+  transform: translate(50%, -50%) rotate(90deg);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.search-result thead {
+  border-radius: 30px;
+  background-color: var(--color-orange-100);
+}
+
+.search-result thead th {
+  padding: 18px 35px;
+  text-align: left;
+}
+
+.search-result thead th:first-child {
+  border-top-left-radius: 30px;
+}
+
+.search-result thead th:last-child {
+  border-top-right-radius: 30px;
+}
+
+.search-result thead th div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-result thead .search-result__publication {
+  background-color: var(--rgba-orange-20);
+}
+
+.search-result tbody td {
+  vertical-align: top;
+  padding: 35px;
+}
+
+.search-result tbody tr {
+  position: relative;
+  z-index: 1;
+}
+
+.search-result tbody tr:not(:last-child) .search-result__publication a::after {
+  border-bottom: 1px solid var(--color-orange-250);
+}
+
+.search-result tbody tr:last-child .search-result__publication a::before {
+  border-radius: 0 0 30px 30px;
+}
+
+.search-result__authors {
+  width: 19.3%;
+}
+
+.search-result__publication {
+  width: 49.5%;
+}
+
+.search-result__publication a {
+  outline: 0;
+  border-radius: 4px;
+  -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
+  transition: color 0.3s, -webkit-box-shadow 0.3s;
+  transition: color 0.3s, box-shadow 0.3s;
+  transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.search-result__publication a:focus-visible {
+  -webkit-box-shadow: var(--focus-shadow);
+  box-shadow: var(--focus-shadow);
+}
+
+.search-result__publication a::before,
+.search-result__publication a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.search-result__publication a::before {
+  z-index: -1;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.search-result__releases,
+.search-result__pages {
+  width: 15.6%;
 }
 
 @media (min-width: 640px) {
@@ -3857,6 +4059,10 @@ body {
     padding: 16px 20px;
   }
 
+  .form__field--search {
+    padding-left: 50px;
+  }
+
   .footer {
     padding: 50px 0 80px;
   }
@@ -4099,6 +4305,18 @@ body {
 
   .releases-page__button:hover {
     color: var(--color-orange-400);
+  }
+
+  .search-result__sort:hover {
+    background-color: var(--color-dark-600);
+  }
+
+  .search-result__publication a:hover {
+    color: var(--color-orange-400);
+  }
+
+  .search-result__publication a:hover::before {
+    background-color: var(--color-blue-100);
   }
 }
 
