@@ -3,6 +3,7 @@ import GraphModal from 'graph-modal';
 new GraphModal({
     isOpen: (modal) => {
         if (modal.modalContainer.dataset.graphTarget === 'modal-sign-in-form') {
+            modal.modalContainer.offsetParent.classList.add('graph-modal--info')
             new GraphModal('modal').open('modal-sign-in-info');
         }
     }
