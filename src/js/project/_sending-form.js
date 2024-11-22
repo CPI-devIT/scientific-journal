@@ -30,11 +30,5 @@ const submitFormHandler = (formId, nextModalClass) => {
     }
 }
 
-const sendingForm = () => {
-    const signInModal = document.querySelector('[data-graph-target="modal-sign-in-form"]')
-}
-
-sendingForm()
-
 submitFormHandler('modal-restore-form', 'modal-restore-access-success')
 submitFormHandler('modal-sign-up-form', 'modal-registration-success')
