@@ -5,7 +5,7 @@
 import './_just-validate.js';
 import './_mixitup.js';
 import './_modals.js';
-import './_pdf-viewer.js';
+import 'pdfjs-viewer-element';
 // import './_nouislider.js';
 // import './_tabs.js';
 // import './_tippy.js';

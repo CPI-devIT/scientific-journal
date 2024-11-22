@@ -27,12 +27,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2px;
-
-		a {
-			@include link;
-
-			text-decoration: underline;
-		}
 	}
 
 	&__pdf {
