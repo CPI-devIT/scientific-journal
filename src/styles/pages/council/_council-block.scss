@@ -7,7 +7,7 @@
 	}
 
 	&__wrapper {
-		@include flex-alignment(70px, space-between, center);
+		@include flex-alignment(70px, space-around, center);
 
 		@include mq(lg) {
 			flex-direction: column;
