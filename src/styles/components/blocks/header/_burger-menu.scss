@@ -70,8 +70,25 @@
 			align-items: center;
 			margin-bottom: 0;
 			padding-top: 0;
-			padding-right: 60px;
+			padding-right: 114px;
 			gap: 20px;
+		}
+
+    &::before {
+			@include bg-properties(24px 24px);
+			@include circle(var(--color-blue-500));
+
+			content: ' ';
+			position: absolute;
+      right: 0;
+			top: 0;
+			background-image: url('../img/icons/12+.svg');
+
+			@include mq(lg, min) {
+				left: unset;
+				right: 0;
+				transform: translateY(-30%);
+			}
 		}
 
 		&::after {
@@ -85,7 +102,7 @@
 
 			@include mq(lg, min) {
 				left: unset;
-				right: 0;
+				right: 55px;
 				transform: translateY(-30%);
 			}
 		}
