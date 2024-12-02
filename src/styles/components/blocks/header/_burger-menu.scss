@@ -76,7 +76,7 @@
 
     &::before {
 			@include bg-properties(24px 24px);
-			@include circle(#507E96);
+			@include circle(var(--color-blue-500));
 
 			content: ' ';
 			position: absolute;
